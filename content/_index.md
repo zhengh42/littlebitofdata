@@ -13,7 +13,8 @@ My interests focus on big data in genomics and precision medicine. I work with m
 
 My research has been focused on understanding the genetic and genomic basic of cancer by integrating and digging into the massive amount of sequencing datasets in cancer genomics. 
 
+斯坦福大学博士后，香港大学博士，北京大学肄业生，西安交大本科——从千年古都到巍峨帝都，再从全球金融中心到世界科技中心——十年一梦，且惜浮生。
 
-斯坦福大学博士后，香港大学博士，北京大学肄业生，西安交大本科——目前从事肿瘤基因组学的研究工作。
+目前从事肿瘤基因组学的研究工作。
 
-> 人生如逆旅，我亦是行人。
+> 人间有味是清欢

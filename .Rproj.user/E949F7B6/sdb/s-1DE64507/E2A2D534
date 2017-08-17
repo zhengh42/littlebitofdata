@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Strandness in RNASeq\"\ndate: '2017-08-17'\nslug: Strandness_in_RNASeq\n---\n\n\nFiguring how to add figures...",
+    "created" : 1502955640874.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "926712408",
+    "id" : "E2A2D534",
+    "lastKnownWriteTime" : 1502955759,
+    "last_content_update" : 1502955759345,
+    "path" : "~/Google Drive/GitHub/hong_pages/content/en/2017-08-17-rnaseq-strandness.md",
+    "project_path" : "content/en/2017-08-17-rnaseq-strandness.md",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
