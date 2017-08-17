@@ -1,0 +1,98 @@
+baseurl: "https://test/"
+languageCode: "en-us"
+title: "Hong Zheng | 郑虹"
+theme: "hugo-ivy"
+googleAnalytics: ""
+disqusShortname: "hong zheng"
+ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
+hasCJKLanguage: true
+enableEmoji: true
+footnotereturnlinkcontents: "↩"
+rssLimit: 30
+
+permalinks:
+  cn: "/cn/:year/:month/:slug/"
+  en: "/en/:year/:month/:slug/"
+
+menu:
+  main:
+    - name: "About"
+      url: "/en/about/"
+      weight: 1
+    - name: "Blog"
+      url: "/en/"
+      weight: 2
+    - name: "关于"
+      url: "/cn/about/"
+      weight: 3
+    - name: "博客"
+      url: "/cn/"
+      weight: 4
+      
+  en:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "About"
+      url: "/en/about/"
+      weight: 2
+    - name: "Blog"
+      url: "/en/"
+      weight: 3
+    - name: "Vitae"
+      url: "/en/vitae/"
+      weight: 4
+    - name: "中文"
+      url: "/cn/"
+      weight: 5
+  cn:
+    - name: "首页"
+      url: "/"
+      weight: 1
+    - name: "关于"
+      url: "/cn/about/"
+      weight: 2
+    - name: "博客"
+      url: "/cn/"
+      weight: 3
+    - name: "简历"
+      url: "/cn/vitae/"
+      weight: 4
+    - name: "English"
+      url: "/en/"
+      weight: 5
+
+params:
+  description: "Personal website of Hong Zheng; 苏木七的个人网站"
+  footer: "&copy; [Hong Zheng](/) 2017 - 2017 | [Github](https://github.com/zhengh42) "
+  disqusURL: "http://test"
+  customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
+  githubContentURL: "https://github.com/r/zhengh42/edit/master/content/"
+
+  # options for highlight.js (version, additional languages, and theme)
+  highlightjsVersion: "9.12.0"
+  highlightjsCDN: "//cdn.bootcss.com"
+  highlightjsLang: ["r", "yaml", "tex"]
+  highlightjsTheme: "github"
+
+  logo:
+    en:
+      img: "/images/logo.jpg"
+      url: "/"
+      alt: "Hong Zheng"
+      tag: ""
+
+  author:
+    en: "Hong Zheng"
+    cn: "苏木七"
+
+  lang:
+    edit:
+      cn: "编辑"
+    license:
+      cn: "版权"
+    subscribe:
+      cn: "订阅"
+
+blackfriday:
+    extensionsmask: ["noIntraEmphasis"]

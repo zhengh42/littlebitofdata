@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: Homepage\ndate: '2017-08-16'\ndisable_mathjax: true\ndisable_highlight: true\n---\n\nThis is Hong, currently a postdoctoral researcher working at Stanford University, Center for Biomedical Informatics Research, [Gevaert Lab](http://med.stanford.edu/gevaertlab.html).\n\nI got my PhD from The University of Hong Kong, Department of Clinical Oncology, under the supervision of [Prof. Maria Lung](http://www.oncology.hku.hk/staff_mlung.html). I study bioinformatics and cancer genomics. My thesis title was _Identification of Genetic Susceptibility Genes and Characterization of Somatic Mutations in Nasopharyngeal Carcinoma_. \n\nMy interests focus on big data in genomics and precision medicine. I work with multiple omics datasets, including whole-genome, whole-exome, transcriptome, methylome, etc. I am proficient in several programming languages (R, Python, Linux/Bash, and Perl), statistical analysis, and machine learning methods.\n\nMy research has been focused on understanding the genetic and genomic basic of cancer by integrating and digging into the massive amount of sequencing datasets in cancer genomics. \n\n\n斯坦福大学博士后，香港大学博士，北京大学肄业生，西安交大本科——目前从事肿瘤基因组学的研究工作。\n\n> 人生如逆旅，我亦是行人。",
+    "created" : 1502942066182.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2483491410",
+    "id" : "7E4A0FCC",
+    "lastKnownWriteTime" : 1502942071,
+    "last_content_update" : 1502942071952,
+    "path" : "~/Google Drive/GitHub/hong_pages/content/_index.md",
+    "project_path" : "content/_index.md",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
