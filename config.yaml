@@ -1,9 +1,9 @@
 baseurl: "https://test/"
 languageCode: "en-us"
-title: "Hong Zheng | 郑虹"
+title: "Hong Zheng"
 theme: "hugo-ivy"
 googleAnalytics: ""
-disqusShortname: "hong zheng"
+disqusShortname: "https-fishycat-netlify-com"
 ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
 hasCJKLanguage: true
 enableEmoji: true
@@ -65,9 +65,9 @@ menu:
 params:
   description: "Personal website of Hong Zheng; 苏木七的个人网站"
   footer: "&copy; [Hong Zheng](/) 2017 - 2017 | [Github](https://github.com/zhengh42) "
-  disqusURL: "http://test"
+  disqusURL: "https://fishycat.netlify.com/"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
-  githubContentURL: "https://github.com/r/zhengh42/edit/master/content/"
+  githubContentURL: "https://github.com/zhengh42/hong_pages/tree/master/content"
 
   # options for highlight.js (version, additional languages, and theme)
   highlightjsVersion: "9.12.0"
