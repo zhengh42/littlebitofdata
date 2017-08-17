@@ -1,6 +1,6 @@
 baseurl: "https://test/"
 languageCode: "en-us"
-title: "Hong Zheng"
+title: "fishycat"
 theme: "hugo-ivy"
 googleAnalytics: ""
 disqusShortname: "https-fishycat-netlify-com"
@@ -63,7 +63,7 @@ menu:
       weight: 5
 
 params:
-  description: "Personal website of Hong Zheng; 苏木七的个人网站"
+  description: "A little bit of data, and me"
   footer: "&copy; [Hong Zheng](/) 2017 - 2017 | [Github](https://github.com/zhengh42) "
   disqusURL: "https://fishycat.netlify.com/"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
