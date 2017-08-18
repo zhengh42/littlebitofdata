@@ -2,7 +2,7 @@ baseurl: "https://fishycat.netlify.com/"
 languageCode: "en-us"
 title: "fishycat"
 theme: "hugo-ivy"
-googleAnalytics: ""
+googleAnalytics: "UA-104909073-1"
 disqusShortname: "https-fishycat-netlify-com"
 ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
 hasCJKLanguage: true
