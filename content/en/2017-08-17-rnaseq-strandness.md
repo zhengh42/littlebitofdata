@@ -30,7 +30,8 @@ Different tools have different names for stranded setting. To name a few:
 
 What is the most convenient way to tell the strandness? Usually I take several thousands reads from both read 1 and read 2, naming it as test\_1.fg.gz and test\_2.fq.gz, and run one of the following tools:
 
-- [STAR](https://github.com/alexdobin/STAR)
+
+- <a href="https://github.com/alexdobin/STAR" target="_blank">STAR</a>
 
 ```
 STAR --genomeDir <reference index directory> --runThreadN <assigned threads> \
@@ -62,7 +63,7 @@ In the case above, the library is unstranded. If 4rd column counts are almost ze
 
 
 
-- [Salmon](https://combine-lab.github.io/salmon/getting_started/) 
+- <a href="https://combine-lab.github.io/salmon/getting_started/" target="_blank">Salmon</a>
 
 This tool will automatically detect the strandness of the library.
 

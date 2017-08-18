@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"About\"\nslug: \"en/about\"\n---\n\nMy name is Hong Zheng. You can know more about me on the [homepage](/) and my [vitae](../vitae/).   \n\nSee more\n\n- [Linkedin](https://www.linkedin.com/in/hong-zheng-84612791/)\n- [Google Scholar](https://scholar.google.com/citations?user=TToRxrwAAAAJ&hl=en)\n- [ResearchGate](https://www.researchgate.net/profile/Hong_Zheng13)\n- [Stanford page](https://profiles.stanford.edu/hong-zheng)\n\nThis site is created with [Hugo](https://gohugo.io) and the theme [hugo-ivy](https://github.com/yihui/hugo-ivy) is ported from [yihui](https://github.com/rbind/yihui).\n\nThe cute cat logo is from [Deidre Wicks](https://www.etsy.com/shop/waterinmypaint).",
+    "created" : 1503014269306.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1470848479",
+    "id" : "2DEFD3A3",
+    "lastKnownWriteTime" : 1503016670,
+    "last_content_update" : 1503016670977,
+    "path" : "~/Google Drive/GitHub/hong_pages/content/en-about.md",
+    "project_path" : "content/en-about.md",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}

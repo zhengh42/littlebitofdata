@@ -37,7 +37,7 @@ slug: bayesian_in_life_series1
 
 统计学上这叫做precision. Precision=TP/(TP+FP)=1.9%.
 
-----------------------------------------------------------------------------------------------------------
+<div style="BORDER-TOP: 1px solid; FLOAT: left; WIDTH: 100%">
 
 这个问题也可以用Bayes' theorem来解释。用θ=disease和θ=healthy表示患病与否，用 D= + 和 D= - 表示检测结果阳性或者阴性。
 
