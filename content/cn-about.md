@@ -13,7 +13,7 @@ disable_comments: true
 ### 不正经介绍
 
 __喜欢的__  
-\*猫\* ^[此为正则表达式，例如，“\*猫\*”包括猫，熊猫，猫头鹰等，“糖醋*”包括糖醋里脊，糖醋排骨等。] | Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎皮青椒 | 红油抄手 | 榴莲 | <a href=http://www.brazzavilleband.com/ target="_blank">Brazzaville</a> | <a href=https://www.youtube.com/watch?v=hnXCzFnkxtY target="_blank">Imitosis</a> | <a href=https://www.terrypratchettbooks.com/ target="_blank">Terry Pratchett and his Discworld</a> | Bailey's | \*姜\* | 夏天 | 印象派 | 苏轼 | 余光中 | 席慕容 | 桔梗 | <a href="http://www.euniceman.com/" target="_blank" >張惠文Eunice Cheung</a>
+\*猫\* ^[此为正则表达式，例如，“\*猫\*”包括猫，熊猫，猫头鹰等，“糖醋*”包括糖醋里脊，糖醋排骨等。] | Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎皮青椒 | 红油抄手 | 榴莲 | <a href=http://www.brazzavilleband.com/ target="_blank">Brazzaville</a> | <a href=https://www.youtube.com/watch?v=hnXCzFnkxtY target="_blank">Imitosis</a> | <a href=https://www.terrypratchettbooks.com/ target="_blank">Terry Pratchett and his Discworld</a> | Bailey's | \*姜\* | 夏天 | 印象派 | 苏轼 | 余光中 | 席慕容 | 桔梗 | <a href="http://www.euniceman.com/" target="_blank" >張惠文Eunice Cheung</a> | 青瓷 | 霁红釉 | 日落时天空的冷暖渐变色调
 
 __讨厌的__  
 花生 | 大麻味 | 糖醋* 
