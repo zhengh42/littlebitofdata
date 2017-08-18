@@ -2,6 +2,8 @@
 title: "Strandness in RNASeq"
 date: '2017-08-17'
 slug: Strandness_in_RNASeq
+categories: ["data at fingertips"]
+tags: ["RNASeq","Bioinformatics"]
 ---
 
 How to tell whether the paired-end sequencing reads in an RNASeq library are strand-specific or not? According to how read 1 and read 2 align to DNA and RNA sequences, there are three types of RNASeq libraries:

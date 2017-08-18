@@ -2,6 +2,7 @@
 title: "再开始"
 date: '2017-08-16'
 slug: begin_again
+categories: ["a little bit of her"]
 ---
 
 很多年没有正经写作过了，果壳上的科普除外。

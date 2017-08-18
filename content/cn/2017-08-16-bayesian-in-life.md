@@ -2,6 +2,8 @@
 title: "生活中的贝叶斯：谈医院检查的必要性"
 date: '2017-08-16'
 slug: bayesian_in_life_series1
+categories: ["data at fingertips"]
+tags: ["Bayesian","stastitics","生活里的统计学"]
 ---
 
 不少人抱怨去医院看病各种检查太多，但事实上，仅通过一次检查常常是确诊不了疾病的，通常至少需要两三次检查。为什么呢？本文从Bayes' theorem谈谈这个问题。

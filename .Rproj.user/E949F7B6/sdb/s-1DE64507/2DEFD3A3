@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "---\ntitle: \"About\"\nslug: \"en/about\"\n---\n\nMy name is Hong Zheng. You can know more about me on the [homepage](/) and my [vitae](../vitae/).   \n\nSee more\n\n- [Linkedin](https://www.linkedin.com/in/hong-zheng-84612791/)\n- [Google Scholar](https://scholar.google.com/citations?user=TToRxrwAAAAJ&hl=en)\n- [ResearchGate](https://www.researchgate.net/profile/Hong_Zheng13)\n- [Stanford page](https://profiles.stanford.edu/hong-zheng)\n\nThis site is created with [Hugo](https://gohugo.io) and the theme [hugo-ivy](https://github.com/yihui/hugo-ivy) is ported from [yihui](https://github.com/rbind/yihui).\n\nThe cute cat logo is from [Deidre Wicks](https://www.etsy.com/shop/waterinmypaint).",
+    "contents" : "---\ntitle: \"About\"\nslug: \"en/about\"\n---\n\nMy name is Hong Zheng. You can know more about me on the [homepage](/) and my [vitae](../vitae/).   \n\nSee more\n\n- <a href=\"https://www.linkedin.com/in/hong-zheng-84612791/\" target=\"_blank\">Linkedin</a>\n- <a href=\"https://scholar.google.com/citations?user=TToRxrwAAAAJ&hl=en\" target=\"_blank\">Google Scholar</a>\n- <a href=\"https://www.researchgate.net/profile/Hong_Zheng13\" target=\"_blank\">ResearchGate</a>\n- <a href=\"https://profiles.stanford.edu/hong-zheng\" target=\"_blank\">Stanford page</a>\n\nThis site is created with <a href=\"https://gohugo.io\" target=\"_blank\">Hugo</a> and the theme <a href=\"https://github.com/yihui/hugo-ivy\" target=\"_blank\">hugo-ivy</a> is ported from <a href=\"https://github.com/rbind/yihui\" target=\"_blank\">hugo-ivy</a>.\n\nThe cute cat logo is from <a href=\"https://www.etsy.com/shop/waterinmypaint\" target=\"_blank\">Deidre Wicks</a>.",
     "created" : 1503014269306.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1470848479",
+    "hash" : "3223317941",
     "id" : "2DEFD3A3",
-    "lastKnownWriteTime" : 1503016670,
-    "last_content_update" : 1503016670977,
+    "lastKnownWriteTime" : 1503039748,
+    "last_content_update" : 1503039748307,
     "path" : "~/Google Drive/GitHub/hong_pages/content/en-about.md",
     "project_path" : "content/en-about.md",
     "properties" : {

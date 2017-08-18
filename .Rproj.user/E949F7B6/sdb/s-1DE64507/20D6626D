@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "---\ntitle: \"关于\"\nslug: \"cn/about\"\ndisable_comments: true\n---\n\n\n\n### 正经介绍 \n请参考[我的简历](../vitae/)。  \n站点信息请参考[about](../../en/about).\n\n### 不正经介绍\n\n__喜欢的__：猫 | 熊猫 | 猫头鹰 | Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎皮青椒 | 红油抄手 | 榴莲 | <a href=http://www.brazzavilleband.com/ target=\"_blank\">Brazzaville</a> | <a href=https://www.youtube.com/watch?v=hnXCzFnkxtY target=\"_blank\">Imitosis</a> | <a href=https://www.terrypratchettbooks.com/ target=\"_blank\">Terry Pratchett</a> | Bailey's | 姜 | 夏天 | 印象派 | 苏轼 | 余光中 | 席慕容\n\n__讨厌的__：花生 | 大麻味 \n\n__又爱又恨的__：加州的阳光 | 骑自行车 | 芒果 | 炝炒圆白菜\n\n",
+    "contents" : "---\ntitle: \"关于\"\nslug: \"cn/about\"\ndisable_comments: true\n---\n\n\n\n### 正经介绍 \n请参考[我的简历](../vitae/)。  \n站点信息请参考[about](../../en/about).\n\n### 不正经介绍\n\n__喜欢的__  \n\\*猫\\* <sup>[1]</sup> | Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎皮青椒 | 红油抄手 | 榴莲 | <a href=http://www.brazzavilleband.com/ target=\"_blank\">Brazzaville</a> | <a href=https://www.youtube.com/watch?v=hnXCzFnkxtY target=\"_blank\">Imitosis</a> | <a href=https://www.terrypratchettbooks.com/ target=\"_blank\">Terry Pratchett and his Discworld</a> | Bailey's | \\*姜\\* | 夏天 | 印象派 | 苏轼 | 余光中 | 席慕容 | 桔梗\n\n__讨厌的__  \n花生 | 大麻味 | 糖醋* \n\n__又爱又恨的__  \n加州的阳光 | 骑自行车 | 芒果 | 炝炒圆白菜 | Science fiction of Paolo Bacigalupi\n\n[1] 此为正则表达式，例如，“\\*猫\\*”包括猫，熊猫，猫头鹰等，“糖醋*”包括糖醋里脊，糖醋排骨等。\n",
     "created" : 1503036255631.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3670468968",
+    "hash" : "1816599090",
     "id" : "20D6626D",
-    "lastKnownWriteTime" : 1503038826,
-    "last_content_update" : 1503038826717,
+    "lastKnownWriteTime" : 1503047179,
+    "last_content_update" : 1503047179380,
     "path" : "~/Google Drive/GitHub/hong_pages/content/cn-about.md",
     "project_path" : "content/cn-about.md",
     "properties" : {

@@ -1,4 +1,4 @@
-baseurl: "https://test/"
+baseurl: "https://fishycat.netlify.com/"
 languageCode: "en-us"
 title: "fishycat"
 theme: "hugo-ivy"
@@ -28,6 +28,15 @@ menu:
     - name: "博客"
       url: "/cn/"
       weight: 4
+    - name: "Tags 标签"
+      label: "tags"
+      url: "/tags/"
+      weight: 5
+    - name: "Categories 分类"
+      label: "categories"
+      url: "/categories/"
+      weight: 6
+
       
   en:
     - name: "Home"
@@ -42,9 +51,17 @@ menu:
     - name: "Vitae"
       url: "/en/vitae/"
       weight: 4
+    - name: "Tags 标签"
+      label: "tags"
+      url: "/tags/"
+      weight: 5
+    - name: "Categories 分类"
+      label: "categories"
+      url: "/categories/"
+      weight: 6
     - name: "中文"
       url: "/cn/"
-      weight: 5
+      weight: 7
   cn:
     - name: "首页"
       url: "/"
@@ -58,16 +75,24 @@ menu:
     - name: "简历"
       url: "/cn/vitae/"
       weight: 4
+    - name: "Tags 标签"
+      label: "tags"
+      url: "/tags/"
+      weight: 5
+    - name: "Categories 分类"
+      label: "categories"
+      url: "/categories/"
+      weight: 6
     - name: "English"
       url: "/en/"
-      weight: 5
+      weight: 7
 
 params:
   description: "A little bit of data, and me"
   footer: "&copy; [Hong Zheng](/) 2017 - 2017 | [Github](https://github.com/zhengh42) "
   disqusURL: "https://fishycat.netlify.com/"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
-  githubContentURL: "https://github.com/zhengh42/hong_pages/tree/master/content"
+  githubContentURL: "https://github.com/zhengh42/hong_pages/tree/master/content/"
 
   # options for highlight.js (version, additional languages, and theme)
   highlightjsVersion: "9.12.0"
@@ -96,3 +121,7 @@ params:
 
 blackfriday:
     extensionsmask: ["noIntraEmphasis"]
+
+taxonomies:
+   tag : "tags"
+   category : "categories"

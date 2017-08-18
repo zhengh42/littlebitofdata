@@ -7,11 +7,11 @@ My name is Hong Zheng. You can know more about me on the [homepage](/) and my [v
 
 See more
 
-- [Linkedin](https://www.linkedin.com/in/hong-zheng-84612791/)
-- [Google Scholar](https://scholar.google.com/citations?user=TToRxrwAAAAJ&hl=en)
-- [ResearchGate](https://www.researchgate.net/profile/Hong_Zheng13)
-- [Stanford page](https://profiles.stanford.edu/hong-zheng)
+- <a href="https://www.linkedin.com/in/hong-zheng-84612791/" target="_blank">Linkedin</a>
+- <a href="https://scholar.google.com/citations?user=TToRxrwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+- <a href="https://www.researchgate.net/profile/Hong_Zheng13" target="_blank">ResearchGate</a>
+- <a href="https://profiles.stanford.edu/hong-zheng" target="_blank">Stanford page</a>
 
-This site is created with [Hugo](https://gohugo.io) and the theme [hugo-ivy](https://github.com/yihui/hugo-ivy) is ported from [yihui](https://github.com/rbind/yihui).
+This site is created with <a href="https://gohugo.io" target="_blank">Hugo</a> and the theme <a href="https://github.com/yihui/hugo-ivy" target="_blank">hugo-ivy</a> is ported from <a href="https://github.com/rbind/yihui" target="_blank">hugo-ivy</a>.
 
-The cute cat logo is from [Deidre Wicks](https://www.etsy.com/shop/waterinmypaint).
+The cute cat logo is from <a href="https://www.etsy.com/shop/waterinmypaint" target="_blank">Deidre Wicks</a>.
