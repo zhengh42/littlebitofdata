@@ -1,7 +1,6 @@
 ---
 title: "关于"
 slug: "cn/about"
-disable_comments: true
 ---
 
 
@@ -21,7 +20,8 @@ Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎
 <a href=https://www.terrypratchettbooks.com/ target="_blank">Terry Pratchett and his Discworld</a> |
 Bailey's | \*姜\* | 香菜 |夏天 | 印象派 | 苏轼 | 余光中 | 席慕容 | 桔梗 | 青瓷 | 霁红釉 | 日落时天空的冷暖渐变色调 |
 <a href=http://www.euniceman.com/ target="_blank" >張惠文Eunice Cheung</a> |
-栀子花 | 腊梅
+栀子花 | 腊梅 | 
+<a href=http://www.xiami.com/song/eMgX919f6?spm=a1z1s.6659509.0.0.6W1Duj target="_blank">漩涡</a>
 
 __讨厌的__  
 花生 | 大麻味 | 糖醋* | 中医
