@@ -25,7 +25,7 @@ Location:「37.432277, -122.179140」</center>
 —— Prometheus Unbound by Percy Bysshe Shelley
 
 
-However, it is just an illustion that the sun and the moon meet and "kiss" each other. They are never close, and if they do...
+However, it is just an illusion that the sun and the moon meet and "kiss" each other. They are never close, and if they do...
 
 <img src="https://github.com/zhengh42/myfiles/blob/master/personal/solarEclipse3.jpg?raw=true" style="width: 70%; height: 70%" />
 
