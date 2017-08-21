@@ -12,6 +12,6 @@ See more
 - <a href="https://www.researchgate.net/profile/Hong_Zheng13" target="_blank">ResearchGate</a>
 - <a href="https://profiles.stanford.edu/hong-zheng" target="_blank">Stanford page</a>
 
-This site is created with <a href="https://gohugo.io" target="_blank">Hugo</a> and the theme <a href="https://github.com/yihui/hugo-ivy" target="_blank">hugo-ivy</a> is ported from <a href="https://github.com/rbind/yihui" target="_blank">hugo-ivy</a>.
+This site is created with <a href="https://gohugo.io" target="_blank">Hugo</a> and the theme <a href="https://github.com/yihui/hugo-ivy" target="_blank">hugo-ivy</a> is ported from <a href="https://github.com/rbind/yihui" target="_blank">yihui</a>.
 
 The cute cat logo is from <a href="https://www.etsy.com/shop/waterinmypaint" target="_blank">Deidre Wicks</a>.
