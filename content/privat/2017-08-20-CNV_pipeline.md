@@ -1,16 +1,21 @@
 ---
 title: "Detection of Copy Number Variation in Targeted Sequencing Samples"
 date: '2017-08-20'
+author: 'Hong Zheng'
 slug: cnv_pipeline
 ---
 
 ## Introduction
-## Methods
+
+There are two categories of methods for copy number variation (CNV) detection. 
+
+- Based on read pair information, 1) The paired-end mapping approach, in which mapped paired-reads whose distances are significantly different from the predetermined average insert size are used. 2) 
+
 ## Results
 
 ### Ground-truth 1000 Genome CNV data
 
-The processing can be found in /home/zhengh/projects/CNV/105genes/1000g/.
+The data processing can be found in /home/zhengh/projects/CNV/105genes/1000g/.
 
 ```{r}
 ########
@@ -19,14 +24,14 @@ download
 wget ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_study/estd219_1000_Genomes_Consortium_Phase_3_Integrated_SV/vcf/estd219_1000_Genomes_Consortium_Phase_3_Integrated_SV.GRCh37.submitted.variant_call.germline.vcf.gz
 
 ########
-preprocess
+process
 ########
 pre=estd219_1000_Genomes_Consortium_Phase_3_Integrated_SV.GRCh37.submitted.variant_call.germline
 zcat $pre.vcf.gz | egrep -v '^#' | sed 's/;/\t/g' | grep -v CIPOS | awk 'OFS="\t"{print $1,$2,$13,$12,$10,$9}' | sed 's/END=//;s/SAMPLE=//;s/SVTYPE=//;s/CALLID=//' > $pre.preciseCNV.txt
 zcat $pre.vcf.gz | egrep -v '^#' | sed 's/;/\t/g' | grep CIPOS | awk 'OFS="\t"{print $1,$2,$15,$12,$10,$9}' | sed 's/END=//;s/SAMPLE=//;s/SVTYPE=//;s/CALLID=//' > $pre.impreciseCNV.txt
 cat $pre.preciseCNV.txt $pre.impreciseCNV.txt > $pre.CNV.txt
 ```
-
+The final collection of CNV can be found in /home/zhengh/projects/CNV/105genes/1000g/estd219\_1000\_Genomes\_Consortium\_Phase\_3\_Integrated\_SV.GRCh37.submitted.variant\_call.germline.CNV.txt
 
 ### XHMM
 The demo is based on targeted sequencing data of 105 genes in 118 samples.
@@ -68,14 +73,14 @@ __2) XHMM calling__
 
 __Script__: /home/zhengh/projects/CNV/105genes/xhmm/run_XHMM.sh
 
-__2.1__) Change data format, remove samples and target regions that do not fulfill coverage requirments, and mean-center the coveage.
+__*2.1) Change data format, remove samples and target regions that do not fulfill coverage requirments, and mean-center the coveage.*__
 
 a) The"chr" are added to chromosome names to facilitate plots.  
 
 b) Here the default thresholds for coverage are used.   
 
-target mean coverge: between 10 and 500    
-sample mean coverage: bewteen 25 and 200    
+target mean coverage: between 10 and 500    
+sample mean coverage: between 25 and 200    
 
 In this case, 17 samples and 15 targets are removed due to low coverage. They are found in files ending with "filtered\_centered.RD.txt.filtered\_targets.txt" and "filtered\_centered.RD.txt.filtered\_samples.txt".  
 
@@ -106,7 +111,7 @@ $xhmm --matrix -r $work_dir/xhmm/$pre.RD.txt --centerData --centerType target \
 
 Raw coverage (RD.txt) and the output mean-centered coverage after filtering (filtered\_centered.RD.txt) are shown in __Figure 1A and 1B__. 
 
-__2.2__) Run principal component analysis (PCA) on mean-centered data, and then normalizes the data using PCA information.
+__*2.2) Run principal component analysis (PCA) on mean-centered data, and then normalizes the data using PCA information.*__
 
 PCA analysis is used to determine the strongest independent ways (principal components) in which the data varies and remove the strongest signals that are driven by factors that do not reflect true CNV. 
 
@@ -137,7 +142,7 @@ In the second step, the number of principal components to be removed is determin
 The coverage after PCA normalization is shown in __Figure 1C__.
 
 
-__2.3__)   Z-score normalization and further filtering
+__*2.3)   Z-score normalization and further filtering.*__
 
 The PCA-normalized coverage data might still have some targets that have very high variance that may be reflective of failed normalization, thus, they are removed in this step. Note, however, that even after this filtering step, exon targets with very high variance in the original read depths still remain with relatively high (though attenuated) variance in depth after normalization, since large differences between samples and targets are by necessity maintained in order to preserve existing CNV signal as well. Then, for each sample, a z-score is calculated by centering relative to all target depths in that sample.
 
@@ -166,7 +171,7 @@ $xhmm --matrix -r $work_dir/xhmm/$pre.RD.txt \
 
 The coverage after Z score normalization is shown in __Figure 1D__.
 
-__2.4__)  Genotyping CNVs
+__*2.4)  Genotyping CNVs.*__
 
 A hidden Markov model (HMM) with certain properties that were derived from [a large-scale trio data set](https://www.ncbi.nlm.nih.gov/pubmed/23040492) is applied in this step. The parameters, which determine the rate and length of the CNV called, are specified in params.txt (1e-8    6       70      -3      1.00    0       1.00    3       1.00)
 
@@ -235,7 +240,10 @@ Each line is one CNV called in an individual. Column meaning:
 - MEAN\_ORIG_RD	Mean read depth (# of reads) over interval
 
 
-__3)__  Compare with ground truth
+<img src="https://github.com/zhengh42/myfiles/blob/master/stats/XHMM_coverage.jpg?raw=true" style="width: 200%; height: 200%" />    
+
+
+__3)  Compare with ground truth__
 
 
 
