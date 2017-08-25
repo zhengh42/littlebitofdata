@@ -12,16 +12,12 @@ slug: "cn/about"
 
 __喜欢的__  
 \*猫\* ^[此为正则表达式，例如，“\*猫\*”包括猫，熊猫，猫头鹰等，“糖醋*”包括糖醋里脊，糖醋排骨等。] |
-Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎皮青椒 | 红油抄手 | 榴莲 | 碧根果 | 米酒 |
-<a href=http://www.brazzavilleband.com/ target="_blank">Brazzaville</a> |
-<a href=http://www.damienrice.com/ target="_blank">Damien Rice</a> |
-<a href=https://www.youtube.com/watch?v=_gtFtH3sW-M target="_blank">Enchanter</a>  |
-<a href=https://www.youtube.com/watch?v=hnXCzFnkxtY target="_blank">Imitosis</a> |
+Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎皮青椒 | 红油抄手 | 榴莲 | 碧根果 | 米酒 | 
 <a href=https://www.terrypratchettbooks.com/ target="_blank">Terry Pratchett and his Discworld</a> |
 Bailey's | \*姜\* | 香菜 |夏天 | 印象派 | 苏轼 | 余光中 | 席慕容 | 桔梗 | 青瓷 | 霁红釉 | 日落时天空的冷暖渐变色调 |
 <a href=http://www.euniceman.com/ target="_blank" >張惠文Eunice Cheung</a> |
-栀子花 | 腊梅 | 
-<a href=http://www.xiami.com/song/eMgX919f6?spm=a1z1s.6659509.0.0.6W1Duj target="_blank">漩涡</a>
+栀子花 | 腊梅 |
+[Music](../../music)
 
 __讨厌的__  
 花生 | 大麻味 | 糖醋* | 中医
