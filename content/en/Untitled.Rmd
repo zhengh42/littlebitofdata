@@ -1,0 +1,4 @@
+Box Cox transformation: transform gene expression data to normal distribution
+
+x' = (x^lamda-1)/lamda 
+x' = 

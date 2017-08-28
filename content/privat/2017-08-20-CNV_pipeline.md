@@ -5,6 +5,7 @@ author: 'Hong Zheng'
 slug: cnv_pipeline
 ---
 
+
 ## Introduction
 
 There are two categories of methods for copy number variation (CNV) detection. 
@@ -19,12 +20,12 @@ The data processing can be found in /home/zhengh/projects/CNV/105genes/1000g/.
 
 ```{r}
 ########
-download
+#download
 ########
 wget ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_study/estd219_1000_Genomes_Consortium_Phase_3_Integrated_SV/vcf/estd219_1000_Genomes_Consortium_Phase_3_Integrated_SV.GRCh37.submitted.variant_call.germline.vcf.gz
 
 ########
-process
+#process
 ########
 pre=estd219_1000_Genomes_Consortium_Phase_3_Integrated_SV.GRCh37.submitted.variant_call.germline
 zcat $pre.vcf.gz | egrep -v '^#' | sed 's/;/\t/g' | grep -v CIPOS | awk 'OFS="\t"{print $1,$2,$13,$12,$10,$9}' | sed 's/END=//;s/SAMPLE=//;s/SVTYPE=//;s/CALLID=//' > $pre.preciseCNV.txt
@@ -34,7 +35,7 @@ cat $pre.preciseCNV.txt $pre.impreciseCNV.txt > $pre.CNV.txt
 The final collection of CNV can be found in /home/zhengh/projects/CNV/105genes/1000g/estd219\_1000\_Genomes\_Consortium\_Phase\_3\_Integrated\_SV.GRCh37.submitted.variant\_call.germline.CNV.txt
 
 ### XHMM
-The demo is based on targeted sequencing data of 105 genes in 118 samples.
+The demo is based on targeted sequencing data of 105 genes in 118 samples. Processing scripts, intermediate files, and final results can be found in /home/zhengh/projects/CNV/105genes/xhmm/.
 
 __1) Calculate depth of coverage from BAM files__
 
@@ -89,7 +90,17 @@ Importantly, if the experimental setup is expected to result in mean depths that
 c) Center each column of the matrix (RD.txt) so that the mean target value is 0 in preparation for PCA based normalization in the next step.
 
 
-```{r}
+```{bash}
+work_dir=/home/zhengh/projects/CNV/105genes
+xhmm=/home/tools/XHMM/statgen-xhmm-cc14e528d909/xhmm
+covdata=$work_dir/QC/105genespure.bam.DP.sample_interval_summary
+pre=118bam.105genespure
+ref=/home/database/b37/human_g1k_v37_decoy.fasta
+target=105genespure
+interval_file=/home/database/targetBed/$target.bed
+param=/home/tools/XHMM/statgen-xhmm-cc14e528d909/params.txt
+param_adjusted=/home/zhengh/projects/CNV/105genes/xhmm/params.txt
+
 ########
 echo "change data format. Good luck."
 ########
@@ -245,9 +256,219 @@ Each line is one CNV called in an individual. Column meaning:
 
 __3)  Compare with ground truth__
 
+```
+#######
+echo "Get ground truth CNV from 1000G"
+#######
+CNV_1000G=../1000g/estd219_1000_Genomes_Consortium_Phase_3_Integrated_SV.GRCh37.submitted.variant_call.germline.CNV.txt
+sed 's/_.*//' $pre.samplesID.filter  > 1000GsampleID.exclude # get the list of samples IDs to be excluded because of coverge issues
+sed 's/_.*//' ../sampleID > 1000GsampleID # get the list of all samples IDs
+less $pre.targetsID.filter | sed 's/:/\t/;s/-/\t/;s/chr//' |awk 'OFS="\t"{$2=$2-1;print $0}' | sort -k1,1n -k2,2n | subtractBed -a $interval_file -b - > $target.1000G.bed # get the target regions after removing regions with abnormal coverage
+
+Extract.pl 1000GsampleID 1 $CNV_1000G 4  | Exclude.pl 1000GsampleID.exclude 1 - 4 > $pre.1000G.cnv.tmp # get CNVs in selected samples
+intersectBed -a $pre.1000G.cnv.tmp -b $target.1000G.bed > $pre.1000G.cnv.tmpa # get CNVs in selected targets
+./cnv.adjectmerge.pl $pre.1000G.cnv.tmpa | sort -k1,1n -k2,2n > $pre.1000G.cnv.txt # merge multiple record of the same CNV into one
+```
+cat 118bam.105genespure.1000G.cnv.txt  
+```
+2       233200457       233208282       NA18622 DUP     DUP_gs_CNV_2_233200004_233214555_NA18622
+7       6031568 6038922 HG00451 DUP     DUP_gs_CNV_7_6031005_6039619_HG00451
+9       271605  289600  NA18572 DUP     DUP_gs_CNV_9_224074_289974_NA18572
+15      80454561        80460700        NA18558 DEL     UW_VH_20565_NA18558
+16      23614760        23615012        HG00634 DUP     DUP_gs_CNV_16_23608128_23616407_HG00634
+19      45854860        45873862        NA07357 DUP     DUP_gs_CNV_19_45845933_45876990_NA07357
+19      45854860        45873862        NA07357 DUP     DUP_uwash_chr19_45826405_45907191_NA07357
+22      29115356        29121386        HG01872 DUP     DUP_gs_CNV_22_29114293_29125290_HG01872
+```
+
+Comparing XHMM results with ground truth, we can see that except the one region in chr7 (the region has high-variance in coverage), CNV calls in all other reigons are concordant.
 
 
 ### CODEX
+
+Processing scripts, intermediate files, and final results can be found in /home/zhengh/projects/CNV/105genes/CODEX/. 
+
+Script: run_CODEX.R  
+
+Input: BAM files, bed file, and sample IDs
+
+
+```
+library(CODEX2)
+setwd("/home/zhengh/projects/CNV/105genes/CODEX")
+
+######################################################
+######################################################
+####                                              ####
+####          get coverage, gc, mapp              ####
+####                                              ####
+######################################################
+######################################################
+
+bamName <- list.files("/home/zhengh/projects/CNV/105genes/bam", pattern = '*.bam$')
+bamFile <- file.path("/home/zhengh/projects/CNV/105genes/bam",bamName)
+sampname <- as.matrix(read.table(file.path("/home/zhengh/projects/CNV/105genes", "sampleID")))
+bedFile <- file.path("/home/database/targetBed", "105genes.primary_targets.bed")
+projectname<-"CNV_prenetics"
+
+chr=1
+# get bam directories, read in bed file, get sample names
+bambedObj=getbambed(bamdir=bamFile,
+                    bedFile=bedFile,
+                    sampname=sampname,
+                    projectname=projectname,chr)
+bamdir=bambedObj$bamdir; sampname=bambedObj$sampname; ref=bambedObj$ref; projectname=bambedObj$projectname;chr=bambedObj$chr
+# get raw depth of coverage
+coverageObj=getcoverage(bambedObj,mapqthres=20)
+Y=coverageObj$Y; readlength=coverageObj$readlength
+# get gc content
+gc=getgc(chr,ref)
+# get mappability
+mapp=getmapp(chr,ref)
+
+ref.all=bambedObj$ref
+Y.all=coverageObj$Y
+gc.all=gc
+mapp.all=mapp
+chr.all=rep(chr,length=length(mapp))
+
+targ.chr <- unique(as.matrix(read.table(bedFile, sep = "\t")[,1]))
+
+for(chr in 2:23){
+  if(chr==23){chr='X'}
+  if(!is.element(chr,targ.chr)) next
+  # get bam directories, read in bed file, get sample names
+  bambedObj=getbambed(bamdir=bamdir,
+                      bedFile=bedFile,
+                      sampname=sampname,
+                      projectname=projectname,chr)
+  bamdir=bambedObj$bamdir; sampname=bambedObj$sampname; ref=bambedObj$ref; projectname=bambedObj$projectname;chr=bambedObj$chr
+  # get raw depth of coverage
+  coverageObj=getcoverage(bambedObj,mapqthres=20)
+  Y=coverageObj$Y; readlength=coverageObj$readlength
+  # get gc content
+  gc=getgc(chr,ref)
+  # get mappability
+  mapp=getmapp(chr,ref)
+
+  ref.all=c(ref.all,bambedObj$ref)
+  Y.all=rbind(Y.all,coverageObj$Y)
+  gc.all=c(gc.all,gc)
+  mapp.all=c(mapp.all,mapp)
+  chr.all=c(chr.all,rep(chr,length=length(mapp)))
+}
+
+save.image(file=paste(projectname,'_','coverage','.rda',sep=''))
+
+######################################################
+######################################################
+####                                              ####
+####                   normalize                  ####
+####                                              ####
+######################################################
+######################################################
+
+load(paste(projectname,'_coverage.rda',sep=''))
+
+ref.all
+length(chr.all)
+dim(Y.all)
+length(gc.all)
+length(mapp.all)
+
+gene.all=as.matrix(read.table('/home/database/targetBed/105genes.capture_targets.bed',head=F,sep='\t')[,4])
+length(gene.all)
+
+Y=Y.all
+ref=ref.all
+gc=gc.all
+mapp=mapp.all
+gene=gene.all
+
+cov_thres1 =  20
+cov_thres2 =  500
+sample_median_thres = 25
+qcObj=qc(Y,sampname,chr,ref,mapp,gc,cov_thresh=c(cov_thres1,cov_thres2),length_thresh=c(20,2000),mapp_thresh=0.9,gc_thresh=c(20,80))
+Y_qc=qcObj$Y_qc; sampname_qc=qcObj$sampname_qc; gc_qc=qcObj$gc_qc; mapp_qc=qcObj$mapp_qc; ref_qc=qcObj$ref_qc ; qcmat=qcObj$qcmat
+dim(Y_qc)
+length(gc_qc)
+length(mapp_qc)
+gene_qc=gene[which(as.logical(qcmat[,4])==TRUE)]
+chr_qc=chr.all[which(as.logical(qcmat[,4])==TRUE)]
+length(gene_qc)
+length(sampname_qc)
+
+sampfilter=apply(Y_qc,2,median)>=sample_median_thres
+sampname_qc=sampname_qc[sampfilter]
+Y_qc=Y_qc[,sampfilter]
+rm(qcObj)
+
+normObj <- normalize(Y_qc, gc_qc, K = 1:10)
+Yhat <- normObj$Yhat; AIC <- normObj$AIC; BIC <- normObj$BIC ;RSS <- normObj$RSS; K <- normObj$K
+
+save.image(file=paste(projectname,'_','normalize','.rda',sep=''))
+
+######################################################
+######################################################
+####                                              ####
+####                    segment                   ####
+####                                              ####
+######################################################
+######################################################
+
+load(paste(projectname,'_normalize.rda',sep=''))
+
+choiceofK(AIC,BIC,RSS,K,filename=paste(projectname,'_choiceofK','.pdf',sep=''))
+
+dim(Y_qc)
+length(ref_qc)
+length(sampname_qc)
+dim(Yhat[[2]])
+length(chr_qc)
+
+#plot(K, RSS, type = "b", xlab = "Number of latent variables")
+#plot(K, AIC, type = "b", xlab = "Number of latent variables")
+#plot(K, BIC, type = "b", xlab = "Number of latent variables")
+
+
+optK=which.max(BIC)
+optK=1
+source('/home/zhengh/projects/CNV/105genes/CODEX/segment_targeted.R')
+finalcall=matrix(ncol=14)
+colnames(finalcall)=c('sample_name','chr','gene','cnv',
+                      'st_bp','ed_bp','length_kb',
+                      'st_exon','ed_exon','raw_cov',
+                      'norm_cov','copy_no','lratio',
+                      'mBIC')
+
+for(genei in unique(gene_qc)){
+  cat('Segmenting gene',genei,'\n')
+  geneindex=which(gene_qc==genei)
+  yi=Y_qc[geneindex,]
+  yhati=Yhat[[optK]][geneindex,]
+  refi=ref_qc[geneindex]
+  chri=chr_qc[geneindex][1]
+  finalcalli=segment_targeted(yi, yhati, sampname_qc, refi, genei, chri, lmax=length(geneindex), mode='fraction')
+  finalcall=rbind(finalcall,finalcalli)
+}
+
+finalcall=finalcall[-1,]
+cn=(as.numeric(as.matrix(finalcall[,'copy_no'])))
+cn.filter=(cn<=1.7)|(cn>=2.3)
+finalcall=finalcall[cn.filter,]
+
+length_exon=as.numeric(finalcall[,'ed_exon'])-as.numeric(finalcall[,'st_exon'])+1
+finalcall=cbind(finalcall[,1:7],length_exon,finalcall[,10:14])
+
+write.table(finalcall, file = paste( projectname,'_', optK, '_CODEX_frac.txt',
+                                     sep=''), sep='\t', quote=F, row.names=F)
+save.image(file=paste(projectname,'_','finalcall','.rda',sep=''))
+```
+
+Output:  
+/home/zhengh/projects/CNV/105genes/CODEX/CNV_prenetics_1_CODEX_frac.txt
+
+There are two many CNV calls and false discovery rate is very high.
 
 ## Conclusion 
 
