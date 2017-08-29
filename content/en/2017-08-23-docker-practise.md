@@ -38,11 +38,9 @@ Remove stopped containers
 Remove dangling/untagged images  
 `docker images -q --filter dangling=true | xargs docker rmi`
 
-Remove containers created after a specific container  
-`docker ps --since *** -q | xargs docker rm`
+Remove containers created by a specific image  
+`docker ps -a | grep 'nameoftheiamge' | awk '{print $1}' | xargs docker rm`
 
-Remove containers created before a specific container  
-`docker ps --before *** -q | xargs docker rm`
 
 ### Using existing images from docker hub
 

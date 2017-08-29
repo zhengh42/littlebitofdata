@@ -1,16 +1,47 @@
 ---
 title: "Detection of Copy Number Variation in Targeted Sequencing Samples"
-date: '2017-08-20'
+date: '2017-08-28'
 author: 'Hong Zheng'
 slug: cnv_pipeline
+output: 
+  word_document: 
+    toc: yes
+  html_document: 
+    theme: cerulean
+    toc: yes
+  pdf_document: 
+    toc: yes
 ---
-
 
 ## Introduction
 
 There are two categories of methods for copy number variation (CNV) detection. 
 
-- Based on read pair information, 1) The paired-end mapping approach, in which mapped paired-reads whose distances are significantly different from the predetermined average insert size are used. 2) 
+- __Based on read pair information__  
+1) The paired-end mapping approach, in which mapped paired-reads whose distances are significantly different from the predetermined average insert size are used.   
+Tools: __BreakDancer__, VariationHunter, PEMer, etc.   
+2) The split read (SR) approach identifies read pairs in which one read from each pair is aligned to the reference genome uniquely while the other one fails to map or only partially maps to the genome. Those unmapped or partially mapped reads potentially provide accurate breaking points at the single base pair level for CNVs or structural variants.  
+Tools: __Pindel, BreakSeq2__, Delly  
+
+
+- __Based on read depth (RD) information__   
+With the accumulation of high-coverage sequencing data, RD-based methods have become a major approach to estimate CNV. The underlying hypothesis is that the read depth of a genomic region is correlated with the copy number of the region.  
+1) For whole-genome sequencing (WGS), a sliding window approach is adopted.    
+Tools: __CNVnator__, CNVnorm, cn.MOPS, cnvHMM, CNV-seq, JointSLMb, etc.  
+2) For whole-exome sequencing (WES), due to differing capture efficiency and non-continuous distributions of the reads, the methods used for WGS are not suitable. Several special methods have been developed for WES.  
+  &nbsp;&nbsp;a) multiple samples as input. __XHMM, CODEX, CoNIFER__, ExoCNVTest   
+  &nbsp;&nbsp;b) case-control samples as input. ExomeCNV, CONTRA, PropSeq, VarScan2  
+  &nbsp;&nbsp;c) Others. __ExomeDepth__, CONDEX, SeqGene, Control-FREEC  
+  
+  
+The read pair-based methods rely heavily on the location of breakpoints, CNV size relative to insert size, and read length. Due to the discontinuation of genomic regions in exome/targeted sequencing, most CNV breakpoints could not be detected using these methods. 
+
+In contrast, RD-based methods are good for detection of CNVs in scarce genomic regions. Moreover, RD-based methods can detect large insertions and CNVs in complex genomic regions, which are difficult to detect using read pair-based methods.
+
+For RD-based methods, instead of looking at a single sample one time, more and more tools utilize multiple samples to increase sensitivity and reduce false discovery. 
+
+In this demo, both the read pair-based and RD-based methods were deployed to investigate the CNVs in targeted sequencing data. The methods that have been used are emphasized in bold font in the text. 
+
 
 ## Results
 
@@ -35,7 +66,8 @@ cat $pre.preciseCNV.txt $pre.impreciseCNV.txt > $pre.CNV.txt
 The final collection of CNV can be found in /home/zhengh/projects/CNV/105genes/1000g/estd219\_1000\_Genomes\_Consortium\_Phase\_3\_Integrated\_SV.GRCh37.submitted.variant\_call.germline.CNV.txt
 
 ### XHMM
-The demo is based on targeted sequencing data of 105 genes in 118 samples. Processing scripts, intermediate files, and final results can be found in /home/zhengh/projects/CNV/105genes/xhmm/.
+
+XHMM takes multiple samples as input. The demo is based on targeted sequencing data of 105 genes in 118 samples. Processing scripts, intermediate files, and final results can be found in /home/zhengh/projects/CNV/105genes/xhmm/.
 
 __1) Calculate depth of coverage from BAM files__
 
@@ -269,7 +301,8 @@ Extract.pl 1000GsampleID 1 $CNV_1000G 4  | Exclude.pl 1000GsampleID.exclude 1 - 
 intersectBed -a $pre.1000G.cnv.tmp -b $target.1000G.bed > $pre.1000G.cnv.tmpa # get CNVs in selected targets
 ./cnv.adjectmerge.pl $pre.1000G.cnv.tmpa | sort -k1,1n -k2,2n > $pre.1000G.cnv.txt # merge multiple record of the same CNV into one
 ```
-cat 118bam.105genespure.1000G.cnv.txt  
+`cat 118bam.105genespure.1000G.cnv.txt`
+
 ```
 2       233200457       233208282       NA18622 DUP     DUP_gs_CNV_2_233200004_233214555_NA18622
 7       6031568 6038922 HG00451 DUP     DUP_gs_CNV_7_6031005_6039619_HG00451
@@ -281,10 +314,122 @@ cat 118bam.105genespure.1000G.cnv.txt
 22      29115356        29121386        HG01872 DUP     DUP_gs_CNV_22_29114293_29125290_HG01872
 ```
 
-Comparing XHMM results with ground truth, we can see that except the one region in chr7 (the region has high-variance in coverage), CNV calls in all other reigons are concordant.
+Comparing XHMM results with ground truth, we can see that except the one region in chr7 (the region has high-variance in coverage), CNV calls in all other regions are concordant.
+
+
+### ExomeDepth
+
+ExomeDepth runs in three steps.
+
+- Calculate read depth across the datasets, which is similar to XHMM.
+- Generate a panel of reference samples that are copy-number neutral.
+- For each test sample, compare it against the panel of reference samples, and call CNVs.
+
+Scripts: /home/zhengh/projects/CNV/105genes/ExomeDepth/run_ExomeDepth.sh  
+Input: BAM files, interval file, genome fasta file, reference sample IDs (multiple), test sample ID (single)  
+In the trial, 84 samples that fulfill the following criteria are chosen as reference samples:
+
+- Do not have CNV event in 1000 Genome
+- Do not have CNV event in XHMM results
+- Sufficient read depth (Mean Sample RD: 25~200)
+
+
+
+
+```
+library(ExomeDepth)
+
+#######
+#echo "prepare input bam, bed, and genome fasta files"
+#######
+bedFile <- file.path("/home/database/targetBed", "105genespure.txt")
+targets <- read.table(bedFile,head=T)
+b37<-file.path("/home/database/b37","human_g1k_v37_decoy.fasta")
+bamName <- list.files("/home/zhengh/projects/CNV/105genes/bam", pattern = '*.bam$')
+bamFile <- file.path("/home/zhengh/projects/CNV/105genes/bam",bamName)
+
+#######
+#echo "get counts for target regions"
+#######
+TargetCount <- getBamCounts(bed.frame = targets,bam.files = bamFile,include.chr = FALSE,referenceFasta = b37)
+TargetCount.df <- as(TargetCount[, colnames(TargetCount)], 'data.frame')
+
+#######
+#echo "prepare reference samples"
+#######
+sampleID.nocnv<-scan("/home/zhengh/projects/CNV/105genes/xhmm/sampleID.noCNV",quiet=T,what="character")
+my.ref.samples <- paste0(sampleID.nocnv,".mapped.dedupped.realigned.recalled.bam")
+my.reference.set <- as.matrix(TargetCount.df[, my.ref.samples])
+
+#######
+#echo "CNV calling per sample"
+#######
+sampleID<-scan("/home/zhengh/projects/CNV/105genes/ExomeDepth/samples",quiet=T,what="character")
+for (Sample in sampleID){
+
+my.test <- TargetCount.df[,paste0(Sample,".mapped.dedupped.realigned.recalled.bam")]
+my.choice <- select.reference.set (test.counts = my.test,
+        reference.counts = my.reference.set,
+        bin.length = (TargetCount.df$end - TargetCount.df$start)/1000,
+        n.bins.reduced = 10000)
+
+my.matrix <- as.matrix( TargetCount.df[, my.choice$reference.choice, drop = FALSE])
+my.reference.selected <- apply(X = my.matrix, MAR = 1, FUN = sum)
+
+all.exons <- new('ExomeDepth',
+        test = my.test,
+        reference = my.reference.selected,
+        formula = 'cbind(test, reference) ~ 1')
+
+all.exons <- CallCNVs(x = all.exons,
+        transition.probability = 10^-4,
+        chromosome = TargetCount.df$space,
+        start = TargetCount.df$start,
+        end = TargetCount.df$end,
+        name = TargetCount.df$names)
+
+if(nrow(all.exons@CNV.calls)>0){
+        output.file <- paste0(Sample,".cnv.txt")
+        write.table(file = file.path("/home/zhengh/projects/CNV/105genes/ExomeDepth/out",output.file),x = cbind(Sample,all.exons@CNV.calls),row.names = FALSE,quote=F,sep="\t")
+}
+}
+```
+
+Output:  
+
+`cd /home/zhengh/projects/CNV/105genes/ExomeDepth/out;  
+cat *.txt | egrep -v 'Sample' | sort -k8n  |cut -f1,4,9
+`
+
+```
+HG02522_S57     duplication     chrX:154002844-154004606
+NA18622_S55     duplication     chr2:233198528-233208282
+HG00451_S34     duplication     chr6:26092804-26094703
+HG00451_S34     duplication     chr7:6012999-6048725
+HG00629_S27     deletion        chr7:6012999-6018339
+HG00684_S13     duplication     chr7:6017194-6018339
+HG00692_S10     deletion        chr7:6012999-6018339
+HG01872_S48     deletion        chr7:6012999-6013213
+NA11995_S51     deletion        chr7:6012999-6018339
+NA12889_S61     duplication     chr7:6017194-6018339
+NA18609_S49     duplication     chr7:6017194-6018339
+NA18624_S59     deletion        chr7:6012999-6018339
+NA18873_S38     duplication     chr7:6017194-6018339
+NA18572_S44     duplication     chr9:214926-289600
+HG01872_S48     duplication     chr11:118955719-118955888
+NA11995_S51     deletion        chr15:40493079-40493221
+NA18558_S39     deletion        chr15:80454562-80460700
+HG00634_S26     duplication     chr16:23614761-23615012
+NA07357_S45     duplication     chr19:45855446-45873862
+HG01872_S48     duplication     chr22:29115357-29121386
+```
+
+Similar to XHMM result, the region in chr7 is quite ambiguous and may not be trustable. Except for chr7 regions, ExomeDepth identifies all the other CNV events in the ground truth 1000 Genome data. Besides, ExomeDepth also detects extra CNVs not present in 1000 Genome and XHMM results, and the accuracy remains to be evaluated.
 
 
 ### CODEX
+
+CODEX takes multiple samples as input.
 
 Processing scripts, intermediate files, and final results can be found in /home/zhengh/projects/CNV/105genes/CODEX/. 
 
@@ -470,5 +615,34 @@ Output:
 
 There are two many CNV calls and false discovery rate is very high.
 
+
+### Read pair-based methods
+Several methods based on read pairs, including __BreakDancer, Pindel__, and __BreakSeq2__ have been utilized to examine the datasets. As expected, these methods don't perform well for targeted sequencing datasets. Due to that fact that most breakpoints do not fall into exon regions, these methods can hardly identify true CNVs, and the results are mainly false positives. Therefore, the detailed scripts and results are not shown here. They can be found in /home/zhengh/projects/CNV/105genes/. 
+
+### Other methods
+Besides XHMM, ExomeDepth, CODEX, and several read-pair based methods, two other methods were also tested, but with no meaningful outputs. 
+
+- __CNVnator__. This tool is only suitable for whole genome sequencing.
+- __CoNIFER__. This tool is only suitable for whole exome sequencing or genome sequencing. Targeted sequencing has too few targets.
+
+The detailed script and results can be found in /home/zhengh/projects/CNV/105genes/. 
+
 ## Conclusion 
+
+To identify CNVs from targeted sequencing data, RD-based methods perform better than read pair-based methods. Among the RD-based methods, __XHMM__ and  __ExomeDepth__ are both good at CNV detection utilizing a population of samples. 
+
+- XHMM works with multiple samples in each stage of the workflow.
+- ExomeDepth also need multiple samples at the first stage to build a panel of reference. After the reference panel is ready, ExomeDepth can take in single sample each time, compare it with reference panel, and output CNV calls in the single sample.
+- The results of XHMM and ExomeDepth are highly consistent and they both can identify CNVs in 1000 Genome ground truth dataset, except for a few problematic regions. In future workflow, these two methods can be combined to get a more confident CNV callset.  
+
+Several aspects need to be paid attention to:
+
+- Sufficient __sample size__ and __number of targeted region__ are needed to accurately model the read depths and detect CNVs.
+- The RD-based CNV methods, including XHMM and ExomeDepth , depend on a set of __normal samples__ (without CNV changes) in the datasets to serve as baseline for CNV calling. For example, if all the samples in the datasets have deletions in a specific region, these methods will classify it as systematic problem (failure to capture, mapping problem etc.) and will not output the region as deletion event.
+- Fine tuning of the parameters/choices of samples is needed in future workflow to achieve high accuracy.
+
+ 
+
+
+
 
