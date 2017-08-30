@@ -9,8 +9,6 @@ output:
   html_document: 
     theme: cerulean
     toc: yes
-  pdf_document: 
-    toc: yes
 ---
 
 ## Introduction

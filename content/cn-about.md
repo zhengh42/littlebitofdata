@@ -15,13 +15,39 @@ __喜欢的__
 Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎皮青椒 | 红油抄手 | 榴莲 | 碧根果 | 米酒 | 
 <a href=https://www.terrypratchettbooks.com/ target="_blank">Terry Pratchett and his Discworld</a> |
 Bailey's | \*姜\* | 香菜 |夏天 | 印象派 | 苏轼 | 余光中 | 席慕容 | 桔梗 | 青瓷 | 霁红釉 | 日落时天空的冷暖渐变色调 |
-<a href=http://www.euniceman.com/ target="_blank" >張惠文Eunice Cheung</a> |
-栀子花 | 腊梅 |
-[Music](../../music)
+栀子花 | 腊梅 
+
+- Music  
+<a href=http://www.brazzavilleband.com/ target="_blank">Brazzaville</a> |
+<a href=http://www.damienrice.com/ target="_blank">Damien Rice</a> |
+<a href=http://www.mylittleairport.com/ target="_blank">My Little Airport</a> | 
+Glen Hansard & Lisa Hannigan | 
+Andrew Bird | 陈珊妮  
+<a href=https://www.youtube.com/watch?v=_gtFtH3sW-M target="_blank">Enchanter</a>  |
+<a href=http://www.xiami.com/song/eMgX919f6?spm=a1z1s.6659509.0.0.6W1Duj target="_blank">漩涡(彭羚&黄耀明)</a> |
+<a href=https://www.youtube.com/watch?v=sByFj8cKsq8 target="_blank">垃圾 (卢巧音) </a> | 
+<a href=https://www.youtube.com/watch?v=I1ohEywty70 target="_blank">Summer Days In Bloom (Maximilian Hecker)</a> | 
+<a href=https://www.youtube.com/watch?v=dBjAa1ZahWE target="_blank">Hallo Goodbye (The Pancakes) </a> |
+<a href=https://www.youtube.com/watch?v=y_MsIJFIuQI target="_blank">很多鱼 (龙宽九段) </a> |
+<a href=https://www.youtube.com/watch?v=5KXsPIQ3qiU target="_blank">Brother (Morten Harket) </a> |
+<a href=https://www.youtube.com/watch?v=H4REqXDKvxU target="_blank">1965 (Zella) </a> |
+<a href=https://www.youtube.com/watch?v=zlO7CGUdlmE target="_blank">历历万乡 (陈粒) </a> |
+<a href=https://www.youtube.com/watch?v=6CvuyaKmLnw target="_blank">Illuminated (Hurts) </a> |
+
+
+
+- Art   
+<a href=http://www.euniceman.com/ target="_blank" >張惠文Eunice Cheung</a>  
+<a href=https://www.jpartcollage.com/ target="_blank" >Jamie Pavlich-Walker, paintings with recycled magazines, maps, and newspapers</a>  
+<a href=http://wllyfineart.com/ target="_blank" >Willow LaLand-Yeilding, wine!</a>  
+<a href=http://www.artadolfo.com/ target="_blank" >Adolfo Girala</a>
 
 __讨厌的__  
 花生 | 大麻味 | 糖醋* | 中医
 
 __又爱又恨的__  
 加州的阳光 | 骑自行车 | 芒果 | 炝炒圆白菜 | Science fiction of <a href="http://windupstories.com/" target="_blank">Paolo Bacigalupi</a>
+
+
+
 
