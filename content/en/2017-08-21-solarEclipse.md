@@ -2,7 +2,7 @@
 title: "Solar Eclipse"
 date: '2017-08-21'
 slug: solar eclipse
-categories: ["a little bit of world"]
+categories: ["a little bit of her"]
 ---
 
 <img src="https://github.com/zhengh42/myfiles/blob/master/personal/solarEclipse1.jpg?raw=true" style="width: 70%; height: 70%" />    

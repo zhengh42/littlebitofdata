@@ -20,14 +20,14 @@ Stop a container
 `docker stop my_container`
 
 Remove a container (only stopped containers can be removed)  
-`docker rm ***`
+`docker rm my_container`
 
 Stop and remove all containers  
 `docker stop $(docker ps -a -q)`  
 `docker rm $(docker ps -a -q)`
 
 Remove images  
-`docker rmi ***`
+`docker rmi my_image`
 
 List all exited containers  
 `docker ps -aq -f status=exited`  
@@ -39,7 +39,7 @@ Remove dangling/untagged images
 `docker images -q --filter dangling=true | xargs docker rmi`
 
 Remove containers created by a specific image  
-`docker ps -a | grep 'nameoftheiamge' | awk '{print $1}' | xargs docker rm`
+`docker ps -a | grep 'my_image' | awk '{print $1}' | xargs docker rm`
 
 
 ### Using existing images from docker hub
@@ -94,5 +94,7 @@ After that, an image named "dukegcb/picard" would appear if we run `docker image
 How to use picard tools such as CollectHsMetrics from this image? 
 
 `docker run dukegcb/picard:2.10.7 java -jar picard.jar CollectHsMetrics [other arguments]`
+
+Also use `-v` to mount local directory into docker containers.
 
 
