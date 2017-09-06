@@ -23,17 +23,9 @@ Bailey's | \*姜\* | 香菜 |夏天 | 印象派 | 苏轼 | 余光中 | 席慕容
 <a href=http://www.mylittleairport.com/ target="_blank">My Little Airport</a> | 
 Glen Hansard & Lisa Hannigan | 
 Andrew Bird | 陈珊妮  
-<a href=https://www.youtube.com/watch?v=_gtFtH3sW-M target="_blank">Enchanter</a>  |
 <a href=http://www.xiami.com/song/eMgX919f6?spm=a1z1s.6659509.0.0.6W1Duj target="_blank">漩涡(彭羚&黄耀明)</a> |
 <a href=https://www.youtube.com/watch?v=sByFj8cKsq8 target="_blank">垃圾 (卢巧音) </a> | 
-<a href=https://www.youtube.com/watch?v=I1ohEywty70 target="_blank">Summer Days In Bloom (Maximilian Hecker)</a> | 
-<a href=https://www.youtube.com/watch?v=dBjAa1ZahWE target="_blank">Hallo Goodbye (The Pancakes) </a> |
-<a href=https://www.youtube.com/watch?v=y_MsIJFIuQI target="_blank">很多鱼 (龙宽九段) </a> |
-<a href=https://www.youtube.com/watch?v=5KXsPIQ3qiU target="_blank">Brother (Morten Harket) </a> |
-<a href=https://www.youtube.com/watch?v=H4REqXDKvxU target="_blank">1965 (Zella) </a> |
-<a href=https://www.youtube.com/watch?v=zlO7CGUdlmE target="_blank">历历万乡 (陈粒) </a> |
-<a href=https://www.youtube.com/watch?v=6CvuyaKmLnw target="_blank">Illuminated (Hurts) </a> |
-
+<a href=https://www.youtube.com/watch?v=I1ohEywty70 target="_blank">Summer Days In Bloom (Maximilian Hecker)</a> 
 
 
 - Art   
