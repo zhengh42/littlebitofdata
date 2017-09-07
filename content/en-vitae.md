@@ -14,7 +14,7 @@ Download <a href="https://github.com/zhengh42/myfiles/blob/master/personal/Hong_
 <a href="#Publications">Publications</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#Presentations">Presentations</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#Researchexperience">Research experience</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="#Otherworks">Other works</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="#Otherworks">Other work</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#Awards">Awards</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#Skills">Skills</a>  
 
@@ -36,7 +36,6 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 
 <div id="Education">
 ## Education
-<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 - 2012 ~ 2016, __Ph.D. The University of Hong Kong__  
   * Department of Clinical Oncology, School of Medicine   
@@ -47,10 +46,11 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
   * Study field: Biomedical Engineering
   * Final project: Profiling of small RNAs derived from two rice viruses in defense response in infected rice
   * Graduated with Distinguished Graduate Student Award
+  
+<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 <div id="Publications">
 ## Publications
-<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 - Original Articles
 
@@ -64,10 +64,11 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 
 - Reviews
   * Dai W, __Zheng H__, Cheung AKL, Lung ML. Genetic and epigenetic landscape of nasopharyngeal carcinoma. _Chin Clin Oncol_. 2016, 5(2):16.
+  
+<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 <div id="Presentations">
 ## Presentations
-<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 - 2016 Invited talk at Nasopharyngeal Carcinoma Gordon Research Conference, Hong Kong, June 26 - July 1, Identification of genetic susceptibility genes in nasopharyngeal carcinoma by next-generation sequencing
 - 2016 Poster presentation at AACR Annual Meeting, New Orleans, April 16-20, Whole-exome sequencing identifies NF-κB pathway regulators frequently mutated in nasopharyngeal carcinoma
@@ -79,9 +80,10 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 - 2014 Presentation at NPC AoE Genetics and Genomics Thematic Meeting, The University of Hong Kong, September 29, Whole-exome sequencing of NPC
 - 2013 Presentation at NPC AoE General Meeting, The University of Hong Kong, August 31, Whole-exome sequencing of nasopharyngeal cancer
 
+<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
+
 <div id="Researchexperience">
 ## Research experience
-<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 - __2017-present,	Stanford University__  
   Postdoctoral researcher at Gevaert Lab, Stanford Center for Biomedical Informatics Research, School of Medicine, Stanford University. My research focuses on integration of multi-omics datasets in biomedical research.
@@ -96,10 +98,11 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
   Worked at the State Key Laboratory of Protein and Plant Gene Research, studying plant pathogens and host defense responses, particularly the role of small RNAs and host microRNAs in the defense response of _Oryza sativa_ against two rice viruses. Conducted both bench-top experiments and data analysis.
   * Constructed small RNA libraries from rice infected by viruses for Solexa/Illumina high throughput sequencing 
   * Analyzed the small RNASeq data to investigate the profile of small RNAs and host microRNAs
+  
+<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 <div id="Otherworks">
-## Other works
-<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
+## Other work
 
 - 2017-present	Board member, Chinese Life-science Postdocs and Students <a href=https://web.stanford.edu/group/CLIPSS/ target="_blank">CLIPSS</a>, Stanford University
 - 2016-2017	Bioinformatic Consultant, Prenetics Limited, Hong Kong
@@ -107,10 +110,10 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 - 2014	Organized <a href=http://www.guokr.com/event/351/ target="_blank">One Youth Talk at HK</a>, The University of Hong Kong, October 5
 - 2014	Invited talk, <a href=http://www.guokr.com/event/323/ target="_blank">One Youth Talk at HK</a>, City University of Hong Kong, April 13, DNA sequencing, genetic testing and risk prediction
 
+<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 <div id="Awards">
 ## Awards
-<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 - 2017 	Summer Institutes Scholarship, Department of Biostatistics, University of Washington 
 - 2016	Y S and Christabel Lung Postgraduate Scholarship, The University of Hong Kong
@@ -122,9 +125,10 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 - 2007-2009	Distinguished Student Xi’an Jiaotong University
 - 2008-2010	Siyuan Scholarship, Xi’an Jiaotong University
 
+<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
+
 <div id="Skills">
 ## Skills
-<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 - Hands-on experiences in bioinformatics toolkits and programs. Intensive analysis and interpretation skills of multiple next-generation sequencing datasets
   * Whole-exome sequencing
@@ -137,8 +141,8 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 - Programming languages
   * __R__			Professional working proficiency
   * __Linux/Bash__	Professional working proficiency
-  * __Python__		Professional working proficiency
   * __Perl__		Professional working proficiency
+  * __Python__		Limited working proficiency
   * __MATLAB__		Limited working proficiency
 - Experimental skills
   * DNA/RNA extraction
@@ -148,5 +152,7 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
   * __Cantonese__   Full professional proficiency 
   * __English__    Full professional proficiency
   * __German__   Elementary proficiency
+  
+  <a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
 
