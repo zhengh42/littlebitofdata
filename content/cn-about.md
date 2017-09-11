@@ -10,11 +10,14 @@ slug: "cn/about"
 
 ### 不正经介绍
 
+数据工作者一枚。偶尔写点<a href=http://www.guokr.com/i/1840828729/ target="_blank">科普</a> 。
+
+
 __喜欢的__  
 \*猫\* ^[此为正则表达式，例如，“\*猫\*”包括猫，熊猫，猫头鹰等，“糖醋*”包括糖醋里脊，糖醋排骨等。] |
 Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎皮青椒 | 红油抄手 | 榴莲 | 碧根果 | 米酒 | 
 <a href=https://www.terrypratchettbooks.com/ target="_blank">Terry Pratchett and his Discworld</a> |
-Bailey's | \*姜\* | 香菜 |夏天 | 印象派 | 苏轼 | 余光中 | 席慕容 | 桔梗 | 青瓷 | 霁红釉 | 日落时天空的冷暖渐变色调 |
+Bailey's | \*姜\* | 香菜 | 夏天 | 印象派 | 苏轼 | 余光中 | 席慕容 | 桔梗 | 青瓷 | 霁红釉 | 日落时天空的冷暖渐变色调 |
 栀子花 | 腊梅 
 
 - Music  
