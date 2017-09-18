@@ -3,6 +3,8 @@ title: "A typical RNASeq analysis"
 date: '2017-09-18'
 author: 'Hong Zheng'
 slug: rnaseqmm
+categories: ["data at fingertips"]
+tags: ["Bioinformatics","RNASeq"]
 ---
 
 > This is a __typical__ RNASeq analysis pipeline, not __atypical__. 
