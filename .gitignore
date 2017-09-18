@@ -1,5 +1,6 @@
-.Rproj.user
-.Rhistory
 .RData
-.Ruserdata
-.Rproj.user*
+.Rhistory
+.Rprofile
+.Rproj.user/
+README.md
+hong_pages.Rproj
