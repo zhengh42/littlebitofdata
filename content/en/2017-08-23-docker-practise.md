@@ -61,40 +61,72 @@ The converted file "test.csv" would appear in /home/yourdirectory/ as well.
 
 ### Customize dockerfile
 
-Very useful example Dockerfile of commonly-used tools in bioinformatics:  
+Some example Dockerfile of commonly-used tools in bioinformatics:  
 
-<a href=https://github.com/Duke-GCB/GCB-Dockerfiles target="_blank">GCB-Dockerfile</a>
+<a href=https://github.com/zhengh42/Dockerfiles target="_blank">zhengh42/Dockerfiles</a>
 
-Take the Dockerfile of bedtools for example:
+Take the Dockerfile of samtools/bcftools/htslib for example:
  
 ```
 FROM ubuntu:16.04
-LABEL maintainer="john.bradley@duke.edu"
+MAINTAINER Hong Zheng <zhengh42@stanford.edu>
 
-# picard requires java
+# Install dependencies
 RUN apt-get update && apt-get install -y \
-  wget \
-  openjdk-8-jre-headless
+  curl \
+  build-essential \
+  libncurses-dev \
+  zlib1g-dev \
+  libz-dev \
+  libbz2-dev \
+  liblzma-dev
 
-# Installs fastqc from compiled java distribution into /opt/FastQC
-ENV PICARD_VERSION="2.10.7"
-ENV PICARD_URL https://github.com/broadinstitute/picard/releases/download/${PICARD_VERSION}/picard.jar
+# Set up
+ENV SAMTOOLS_RELEASE=1.5
+ENV SAMTOOLS_URL=https://github.com/samtools/samtools/releases/download/
+ENV BCFTOOLS_RELEASE=1.5
+ENV BCFTOOLS_URL=https://github.com/samtools/bcftools/releases/download/
+ENV HTSLIB_RELEASE=1.5
+ENV HTSLIB_URL=https://github.com/samtools/htslib/releases/download/
+ENV DEST_DIR=/opt/
 
-WORKDIR /opt/picard
-RUN wget $PICARD_URL
+# Download; untar & decompress; remove tr.bz2 file; compile & install samtools; remove unnecessary files
+RUN curl -SLo ${DEST_DIR}/samtools-${SAMTOOLS_RELEASE}.tar.bz2 ${SAMTOOLS_URL}/${SAMTOOLS_RELEASE}/samtools-${SAMTOOLS_RELEASE}.tar.bz2 && \
+  tar -xf ${DEST_DIR}/samtools-${SAMTOOLS_RELEASE}.tar.bz2 -C ${DEST_DIR} && \
+  rm ${DEST_DIR}/samtools-${SAMTOOLS_RELEASE}.tar.bz2 && \
+  cd ${DEST_DIR}/samtools-${SAMTOOLS_RELEASE} && \
+  ./configure && \
+  make && \
+  make install && \
+  rm -rf ${DEST_DIR}/samtools-${SAMTOOLS_RELEASE} && \
+  curl -SLo ${DEST_DIR}/bcftools-${BCFTOOLS_RELEASE}.tar.bz2 ${BCFTOOLS_URL}/${BCFTOOLS_RELEASE}/bcftools-${BCFTOOLS_RELEASE}.tar.bz2 && \
+  tar -xf ${DEST_DIR}/bcftools-${BCFTOOLS_RELEASE}.tar.bz2 -C ${DEST_DIR} && \
+  rm ${DEST_DIR}/bcftools-${BCFTOOLS_RELEASE}.tar.bz2 && \
+  cd ${DEST_DIR}/bcftools-${BCFTOOLS_RELEASE} && \
+  ./configure && \
+  make && \
+  make install && \
+  rm -rf ${DEST_DIR}/bcftools-${HTSLIB_RELEASE} && \
+  curl -SLo ${DEST_DIR}/htslib-${HTSLIB_RELEASE}.tar.bz2 ${HTSLIB_URL}/${HTSLIB_RELEASE}/htslib-${HTSLIB_RELEASE}.tar.bz2 && \
+  tar -xf ${DEST_DIR}/htslib-${HTSLIB_RELEASE}.tar.bz2 -C ${DEST_DIR} && \
+  rm ${DEST_DIR}/htslib-${HTSLIB_RELEASE}.tar.bz2 && \
+  cd ${DEST_DIR}/htslib-${HTSLIB_RELEASE} && \
+  ./configure && \
+  make && \
+  make install && \
+  rm -rf ${DEST_DIR}/htslib-${HTSLIB_RELEASE}
 
-CMD ["java", "-jar", "picard.jar"]
+CMD ["/bin/bash"]
 ```
 
 Build new image from the Dockerfile:  
-`docker build -f picard/2.10.7/Dockerfile -t dukegcb/picard:2.10.7 picard/2.10.7`
+`docker build -f samtools/1.5all/Dockerfile -t zhengh42/samtools:1.5all samtools/1.5all`
 
-After that, an image named "dukegcb/picard" would appear if we run `docker images`.
+After that, an image named "zhengh42/samtools" would appear if we run `docker images`.
 
-How to use picard tools such as CollectHsMetrics from this image? 
+How to use this samtools from this image?
 
-`docker run dukegcb/picard:2.10.7 java -jar picard.jar CollectHsMetrics [other arguments]`
+`docker run -v /home/yourdirectory:/mnt zhengh42/samtools:1.5all samtools view /mnt/yourfiles`
 
-Also use `-v` to mount local directory into docker containers.
-
+/home/yourdirectory stores your files, and it is mounted into /mnt inside docker containers.
 
