@@ -8,7 +8,7 @@ tags: ["RNASeq","Bioinformatics"]
 
 How to tell whether the paired-end sequencing reads in an RNASeq library are strand-specific or not? According to how read 1 and read 2 align to DNA and RNA sequences, there are three types of RNASeq libraries:
 
-<img src="https://github.com/zhengh42/myfiles/blob/master/sequencing/RNASeq_strandness.png?raw=true" width="480" height="280" />
+<img src="https://github.com/zhengh42/myfiles/blob/master/research/RNASeq_strandness.png?raw=true" width="480" height="280" />
 
 - If sequences of read 1 align to the RNA strand, the library is "stranded".
 - If sequences of read 2 align to the RNA strand, the library is "reversed stranded".

@@ -306,7 +306,7 @@ Each line is one CNV called in an individual. Column meaning:
 - MEAN\_ORIG_RD	Mean read depth (# of reads) over interval
 
 
-<img src="https://github.com/zhengh42/myfiles/blob/master/stats/XHMM_coverage.jpg?raw=true" style="width: 200%; height: 200%" />    
+<img src="https://github.com/zhengh42/myfiles/blob/master/research/XHMM_coverage.jpg?raw=true" style="width: 200%; height: 200%" />    
 
 
 __3)  Compare with ground truth__

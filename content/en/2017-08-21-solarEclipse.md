@@ -5,16 +5,16 @@ slug: solar eclipse
 categories: ["a little bit of her"]
 ---
 
-<img src="https://github.com/zhengh42/myfiles/blob/master/personal/solarEclipse1.jpg?raw=true" style="width: 70%; height: 70%" />    
+<img src="https://github.com/zhengh42/myfiles/blob/master/bits/solarEclipse1.jpg?raw=true" style="width: 70%; height: 70%" />    
 
 <center> Time: 2017-8-21 10:12:14  
 Location:「37.432277, -122.179140」</center>
 
-<img src="https://github.com/zhengh42/myfiles/blob/master/personal/solarEclipse2.jpg?raw=true" style="width: 70%; height: 70%" />
+<img src="https://github.com/zhengh42/myfiles/blob/master/bits/solarEclipse2.jpg?raw=true" style="width: 70%; height: 70%" />
 
 <center>The device used to capture eclipse image at hand</center>
 
-<img src="https://github.com/zhengh42/myfiles/blob/master/personal/solarEclipse.jpg?raw=true" style="width: 70%; height: 70%" />
+<img src="https://github.com/zhengh42/myfiles/blob/master/bits/solarEclipse.jpg?raw=true" style="width: 70%; height: 70%" />
 
 <center>Also refected in the shadow of leaves</center>
 
@@ -27,7 +27,7 @@ Location:「37.432277, -122.179140」</center>
 
 However, it is just an illusion that the sun and the moon meet and "kiss" each other. They are never close, and if they are...
 
-<img src="https://github.com/zhengh42/myfiles/blob/master/personal/solarEclipse3.jpg?raw=true" style="width: 70%; height: 70%" />
+<img src="https://github.com/zhengh42/myfiles/blob/master/bits/solarEclipse3.jpg?raw=true" style="width: 70%; height: 70%" />
 
 <center>hmm...</center>
 
