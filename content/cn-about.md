@@ -20,8 +20,6 @@ Yes Minister | Sherlock | English Patient | Mr. Thornton | British English | 虎
 Bailey's | \*姜\* | 香菜 | 夏天 | 印象派 | 苏轼 | 余光中(的诗) | 席慕容 | 桔梗 | 青瓷 | 霁红釉 | <a href=https://fishycat.netlify.com/cn/2018/04/sky/ target="_blank">日落时天空的冷暖渐变色调</a> |
 栀子花 | 腊梅 
 
-https://fishycat.netlify.com/cn/2017/08/hummingbird/
-
 - Music  
 <a href=http://www.brazzavilleband.com/ target="_blank">Brazzaville</a> |
 <a href=http://www.damienrice.com/ target="_blank">Damien Rice</a> |
