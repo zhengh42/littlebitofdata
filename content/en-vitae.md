@@ -15,6 +15,7 @@ Download <a href="https://github.com/zhengh42/myfiles/blob/master/personal/Hong_
 <a href="#Presentations">Presentations</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#Researchexperience">Research experience</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#Otherworks">Other work</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="#Teaching Experience">Teaching Experience</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#Awards">Awards</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#Skills">Skills</a>  
 
@@ -54,6 +55,10 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 
 - Original Articles
 
+  * __Zheng H__, Brennan K, Hernaez M, Gevaert O, Benchmark of lncRNA Quantification for RNA-Seq of Cancer Samples, bioRxiv preprint, doi.org/10.1101/241869, 2018 Jan, under review in _Nucleic Acid Research_
+  * Qiu Y, __Zheng H__, Gevaert O, A deep learning framework for imputing missing values in genomic data, bioRxiv preprint, doi: https://doi.org/10.1101/406066
+  * Lin W, Yip YL, Jia L, Deng W, __Zheng H__, Dai W, et al, Establishment and characterization of new tumor xenografts and cancer cell lines from EBV-positive nasopharyngeal carcinoma, _Nat Commun_. 2018 Nov 7
+  * Bakr S, Gevaert O, Echegaray S, Ayers K, Zhou M, Shafiq M, __Zheng H__, Benson J, Zhang W, Leung A, Kadoch M, Shrager J, Quon A, Rubin D, Plevritis S, Napel S, A Radiogenomic Dataset of Non-Small Cell Lung Cancer, _Sci Data_. 2018 Oct 16;5:180202
   * Dai W, Ko JMY, Choi SSA, Yu Z, Ning L, __Zheng H__ et al. Whole-exome sequencing reveals critical genes underlying metastasis in esophageal squamous cell carcinoma. _J Pathol_. 2017 Aug;242(4):500-510
   * __Zheng H\*__, Dai W\*, Cheung AKL\*, Ko JMY, et.al. Whole-exome sequencing identifies multiple loss-of-function mutations of NF-κB pathway regulators in nasopharyngeal carcinoma, _Proc Natl Acad Sci U S A_. 2016, 113(40):11283–11288 *contributed equally
   * Dai W\*, __Zheng H\*__, Cheung AKL, Tang CS, Ko JMY, Wong BWY, et al. Whole-exome sequencing identifies MST1R as a genetic susceptibility gene in nasopharyngeal carcinoma. _Proc Natl Acad Sci U S A_. 2016, 113(12):3317-3322. *contributed equally
@@ -70,6 +75,7 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 <div id="Presentations">
 ## Presentations
 
+- 2018 Poster presentation at AACR Annual Meeting, Chicago, April 14-18, Benchmark of lncRNA Quantification for RNA-Seq of Cancer Samples
 - 2016 Invited talk at Nasopharyngeal Carcinoma Gordon Research Conference, Hong Kong, June 26 - July 1, Identification of genetic susceptibility genes in nasopharyngeal carcinoma by next-generation sequencing
 - 2016 Poster presentation at AACR Annual Meeting, New Orleans, April 16-20, Whole-exome sequencing identifies NF-κB pathway regulators frequently mutated in nasopharyngeal carcinoma
 - 2016 Presentation at NPC AoE General Meeting, The University of Hong Kong, August 27, Whole-exome sequencing of NPC xenografts and human tumors
@@ -87,12 +93,16 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 
 - __2017-present,	Stanford University__  
   Postdoctoral researcher at Gevaert Lab, Stanford Center for Biomedical Informatics Research, School of Medicine, Stanford University. My research focuses on integration of multi-omics datasets in biomedical research.
+  * DNA methylation profiling in cancers. I’m working on developing a framework to model DNA methylation from bisulfite sequencing of cancer samples, aiming to identify genes or non-coding regions that are epigenetically-regulated in cancers and reveal epigenetically distinct cancer subtypes.
+  * Long noncoding RNAs in cancer. I’m exploring the expression pattern of long noncoding RNAs in cancer samples and integrating with other omics data such as DNA methylation to identify regulatory lncRNAs in cancer.
+  * Module network analysis of single-cell RNA sequencing datasets. I’m developing a module network analysis framework based on AMARETTO that aims to capture major biological pathways driving cell type evolution and tumor subtype classification from single-cell RNA sequencing datasets in cancer.
+  
 - __2012-2016,	The University of Hong Kong__  
   Ph.D. candidate in the lab of Prof. Maria Li Lung, Department of Clinical Oncology, studying the genetic and genomic basis of nasopharyngeal carcinoma (NPC). Established the pipeline for analysis of multi-omics datasets, including whole-exome sequencing (WES), targeted sequencing and RNASeq. Worked collaboratively on several projects.
-    * Genetic susceptibility study of NPC. WES and targeted sequencing were used to examine blood samples of cancer cases and controls to identify genes or pathways associated with disease risk. 
-   * Characterization of somatic mutations of NPC tumors. Paired tumor and blood samples were sequenced to characterize the mutation landscape and signatures in NPC tumors and to identify significantly mutated genes and pathways. Apart from data analysis, I also did wet-lab mutation validation.
-   * Expression profiling of NPC tumors. Paired tumor and non-tumor samples were examined with RNASeq to characterize the expression profiles, alternative splicing, and fusion events in tumors.
-    * DNA methylome profiling of NPC tumors. Helped in the analysis of DNA methylome data using HumanMethylation450 BeadArray to study the methylation patterns in NPC tumors.
+  * Genetic susceptibility study of NPC. WES and targeted sequencing were used to examine blood samples of cancer cases and controls to identify genes or pathways associated with disease risk. 
+  * Characterization of somatic mutations of NPC tumors. Paired tumor and blood samples were sequenced to characterize the mutation landscape and signatures in NPC tumors and to identify significantly mutated genes and pathways. Apart from data analysis, I also did wet-lab mutation validation.
+  * Expression profiling of NPC tumors. Paired tumor and non-tumor samples were examined with RNASeq to characterize the expression profiles, alternative splicing, and fusion events in tumors.
+  * DNA methylome profiling of NPC tumors. Helped in the analysis of DNA methylome data using HumanMethylation450 BeadArray to study the methylation patterns in NPC tumors.
     
 - __2010-2012,	Peking University__  
   Worked at the State Key Laboratory of Protein and Plant Gene Research, studying plant pathogens and host defense responses, particularly the role of small RNAs and host microRNAs in the defense response of _Oryza sativa_ against two rice viruses. Conducted both bench-top experiments and data analysis.
@@ -105,10 +115,20 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
 ## Other work
 
 - 2017-present	Board member, Chinese Life-science Postdocs and Students <a href=https://web.stanford.edu/group/CLIPSS/ target="_blank">CLIPSS</a>, Stanford University
-- 2016-2017	Bioinformatic Consultant, Prenetics Limited, Hong Kong
+- 2016-2017	Bioinformatic Consultant, Prenetics Limited, Hong Kong  
+  Developed next-generation sequencing (NGS) product and set up the analysis pipeline for sequencing data
 - 2010-present	Science writer of Scientific  <a href=http://www.guokr.com/i/1840828729/ target="_blank">Guokr</a>
 - 2014	Organized <a href=http://www.guokr.com/event/351/ target="_blank">One Youth Talk at HK</a>, The University of Hong Kong, October 5
 - 2014	Invited talk, <a href=http://www.guokr.com/event/323/ target="_blank">One Youth Talk at HK</a>, City University of Hong Kong, April 13, DNA sequencing, genetic testing and risk prediction
+
+<a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
+
+<div id="Teaching Experience">
+## Teaching Experience
+- 2018	Mentor, Stanford Canary CREST Program
+- 2018	Instructor, Principles of Cancer Systems Biology (CBIO 243), DNA methylation analysis, Stanford University
+- 2011	Teaching assistant, New Thinkings of Life Science, School of Life Sciences, Peking University
+- 2011	Teaching assistant, Molecular Virology, School of Life Sciences, Peking University
 
 <a href="#header"; style="float:right"; style="text-decoration:none">⇜</a>
 
@@ -142,7 +162,7 @@ Postdoctoral researcher, Gevaert Lab, Center for Biomedical Informatics Research
   * __R__			Professional working proficiency
   * __Linux/Bash__	Professional working proficiency
   * __Perl__		Professional working proficiency
-  * __Python__		Limited working proficiency
+  * __Python__		Professional working proficiency
   * __MATLAB__		Limited working proficiency
 - Experimental skills
   * DNA/RNA extraction
