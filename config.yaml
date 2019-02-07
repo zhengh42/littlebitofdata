@@ -1,4 +1,4 @@
-baseurl: "https://fishycat.netlify.com/"
+baseurl: "https://littlebitofdata.com/"
 languageCode: "en-us"
 title: "LittleBitofData"
 theme: "hugo-ivy"
@@ -92,7 +92,7 @@ menu:
 
 params:
   description: "A little bit of data, and me"
-  footer: "&copy; [Hong Zheng](/) 2017 - 2018 | [Github](https://github.com/zhengh42) "
+  footer: "&copy; [Hong Zheng](/) 2017 - 2019 | [Github](https://github.com/zhengh42) "
   disqusURL: "https://fishycat.netlify.com"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
   githubContentURL: "https://github.com/zhengh42/hong_pages/tree/master/content/"
