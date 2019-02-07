@@ -1,6 +1,6 @@
 baseurl: "https://fishycat.netlify.com/"
 languageCode: "en-us"
-title: "fishycat"
+title: "LittleBitofData"
 theme: "hugo-ivy"
 googleAnalytics: "UA-104890341-1"
 disqusShortname: "https-fishycat-netlify-com"
