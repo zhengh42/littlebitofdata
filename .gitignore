@@ -1,4 +1,5 @@
 .RData
+*.json
 .Rhistory
 .Rprofile
 .Rproj.user/
