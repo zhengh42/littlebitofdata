@@ -40,7 +40,7 @@ menu:
       url: "/categories/"
       weight: 7
 
-      
+
   en:
     - name: "Home"
       url: "/"
@@ -92,7 +92,7 @@ menu:
 
 params:
   description: "A little bit of data, and me"
-  footer: "&copy; [Hong Zheng](/) 2017 - 2019 | [Github](https://github.com/zhengh42) "
+  footer: "&copy; [Hong Zheng](/) 2017 - 2020 | [Github](https://github.com/zhengh42) "
   disqusURL: "https://fishycat.netlify.com"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
   githubContentURL: "https://github.com/zhengh42/hong_pages/tree/master/content/"

@@ -17,7 +17,7 @@ How to tell whether the paired-end sequencing reads in an RNASeq library are str
 Different tools have different names for stranded setting. To name a few:
 
 
-|	            |Condition A	| Condition B	| Condition C |
+|	            |Case A	| Case B	| Case C |
 | ---         | ---         | ---         | ---         |
 |METHODS<br> or KITS	|Ligation<br>Standard SOLiD         |	dUTP<br> IlluminaTruSeq Stranded |	Standard Illumina             |
 |TopHat	      |--library-type<br>fr-secondstrand	  | --library-type<br>fr-firststrand	| --library-type<br>fr-unstranded  |
