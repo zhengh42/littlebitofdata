@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活里的统计学 on LittleBitofData</title>
+    <link>https://littlebitofdata.com/tags/%E7%94%9F%E6%B4%BB%E9%87%8C%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+    <description>Recent content in 生活里的统计学 on LittleBitofData</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://littlebitofdata.com/tags/%E7%94%9F%E6%B4%BB%E9%87%8C%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>生活中的贝叶斯：谈医院检查的必要性</title>
+      <link>https://littlebitofdata.com/cn/2017/08/bayesian_in_life_series1/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/cn/2017/08/bayesian_in_life_series1/</guid>
+      <description>不少人抱怨去医院看病各种检查太多，但事实上，仅通过一次检查常常是确诊不了疾病的，通常至少需要两三次检查。为什么呢？本文从Bayes&amp;rsqu</description>
+    </item>
+    
+  </channel>
+</rss>

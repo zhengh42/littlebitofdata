@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Lecture Notes - LittleBitofData</title>
+    <meta property="og:title" content="Lecture Notes - LittleBitofData">
+    
+
+    
+      
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+<link rel="stylesheet" href="/css/custom.css" />
+
+  </head>
+
+  
+  <body class="en">
+    <header class="masthead">
+      
+
+<h1><a href="/"><img src="/images/logo.jpg" alt="Hong Zheng" /></a></h1>
+
+
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/en/about/">About</a></li>
+        
+        <li><a href="/en/">Blog</a></li>
+        
+        <li><a href="/en/vitae/">Vitae</a></li>
+        
+        <li><a href="/tags/">Tags 标签</a></li>
+        
+        <li><a href="/categories/">Categories 分类</a></li>
+        
+        <li><a href="/cn/">中文</a></li>
+        
+        
+
+<li class="meu-extra"></li>
+
+
+
+<li><a href="https://github.com/zhengh42/hong_pages/tree/master/content/en/2017-12-31-lectures.md" target="_blank">Edit this page</a></li>
+
+
+<li><a href="/en/index.xml" type="application/rss+xml" title="RSS feed">Subscribe</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">License</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Lecture Notes</h1>
+
+
+<h3>Hong Zheng / 
+2017-12-04</h3>
+
+<hr>
+
+
+      </header>
+
+
+
+
+
+<h2 id="10x-genomics-workshop">10X genomics workshop</h2>
+
+<ul>
+<li>Sequencing depth for typical samples: 50,000 raw reads per cell is the minimal recommended sequencing depth</li>
+<li>Cell Ranger
+
+<ul>
+<li>mkfastq, from bcl to fastq</li>
+<li>count, transcriptome alignment with STAR</li>
+<li>aggr</li>
+<li>reanalyze</li>
+</ul></li>
+
+<li><p>Count pipeline</p>
+
+<ul>
+<li>BAM</li>
+<li>MEX-gene/barcode matrix, market exchange format</li>
+<li>HTML</li>
+<li>.cloupe files: 2D projections, clustering, DE</li>
+</ul></li>
+
+<li><p>Filterred gene-barcode matrix: select GEMs that likely contain cells:</p>
+
+<ul>
+<li>sum UMI counts for each barcode</li>
+<li>select barccode with total UMI count &gt;=10% of 99th percentile of the expected recoverred cells</li>
+</ul></li>
+</ul>
+
+<h2 id="how-do-we-learn-what-works-a-two-step-algorithm-for-causal-inference-from-real-world-data">How do we learn what works? a two-step algorithm for causal inference from real world data</h2>
+
+<p>Miguel Hernan, DrPH, Professor of Biostatistics and of Epidemiology<br />
+4/24/2018</p>
+
+<p>Decisions must be made now, in clinical practice and publich health.<br />
+How do we estimate causal effects? Randomized trials.<br />
+If randomized trials are not feasible, then we use observational data.</p>
+
+<p>The target trial concept leads to a simple two-step algorithm for causal inference</p>
+
+<ul>
+<li>Ask a causal question<br />
+Specify the protocol of the target trial<br /></li>
+<li>Answer the causal question<br />
+Conduct the target trial, or<br />
+Use observational data to explictly simulate the target trial</li>
+</ul>
+
+<p>Example: postmenopausal hormone theray and coronary heart disease</p>
+
+<ul>
+<li>Observational epidermiologic studies
+
+<ul>
+<li>&gt;30% lower risk in current users vs. never users. Hazard ratio 0.68 in Nurse&rsquo;s health study (<a href="https://www.ncbi.nlm.nih.gov/pubmed/16417416">https://www.ncbi.nlm.nih.gov/pubmed/16417416</a>)</li>
+</ul></li>
+<li>Randomized trial
+
+<ul>
+<li>&gt;20% higher risk in initiators vs. noninitiators. Hazard ratio 1.24 in Women&rsquo;s health Initiative (<a href="http://www.nejm.org/doi/full/10.1056/NEJMoa030808">http://www.nejm.org/doi/full/10.1056/NEJMoa030808</a>)</li>
+</ul></li>
+</ul>
+
+<h1 id="aacr-2018">AACR 2018</h1>
+
+<h2 id="why-do-lung-adenocarcinomas-respond-to-kinase-inhibitors-while-glioblastomas-don-t-contrasting-patterns-of-tumor-evolution">Why do lung adenocarcinomas respond to kinase inhibitors while glioblastomas don’t? Contrasting patterns of tumor evolution</h2>
+
+<p>Matthew L. Meyerson. Dana-Farber Cancer Inst., Boston, MA</p>
+
+<ul>
+<li>GBM, uniformaly fatal, poor responses to therapeutics</li>
+<li>EGFR mutations in GBM, point mutations in 14% GBM patients
+
+<ul>
+<li>Lung: kiniase domain</li>
+<li>GBM: c-terminal</li>
+</ul></li>
+<li>EGFR amplified in 45% GBM</li>
+</ul>
+
+<h2 id="the-making-of-the-pre-cancer-atlas-opportunities-and-challenges">The making of the pre-cancer atlas: Opportunities and challenges</h2>
+
+<p>Sudhir Srivastava. National Cancer Inst., Rockville, MD</p>
+
+<p>Examples of precancerous lesions</p>
+
+<ul>
+<li>Barret&rsquo;s Esophagus</li>
+<li>Ductal Carcinoma in situ</li>
+<li>Oral Submucous Fibrosis</li>
+<li>Leukoplakia</li>
+<li>Vervical dysplasia</li>
+</ul>
+
+<h2 id="single-cell-genomics-for-the-analysis-of-premalignancy">Single-cell genomics for the analysis of premalignancy</h2>
+
+<p>Nicholas E. Navin. UT MD Anderson Cancer Ctr., Bellaire, TX</p>
+
+<ul>
+<li>Multiclonal Invasion in Breast Tumors Identified by Topographic Single Cell Sequencing
+<a href="http://www.cell.com/cell/fulltext/S0092-8674(17)31449-6">http://www.cell.com/cell/fulltext/S0092-8674(17)31449-6</a></li>
+</ul>
+
+<h2 id="genomic-analysis-of-precancers-in-the-gi-tract">Genomic analysis of precancers in the GI tract</h2>
+
+<p>Eduardo Vilar-Sanchez. UT MD Anderson Cancer Ctr., Houston, TX</p>
+
+<ul>
+<li>what pre-cancers to study</li>
+<li>TCGA-&gt;PCA</li>
+<li>what populations to study from</li>
+<li>what type of samples to study</li>
+<li>what technologies to deploy</li>
+<li>what should be deliverables</li>
+</ul>
+
+<h2 id="cancer-evolution-measured-at-single-cell-resolution">Cancer evolution measured at single cell resolution</h2>
+
+<p>Sohrab Shah. BC Cancer Agency Vancouver Ctr., Vancouver, BC, Canada</p>
+
+<ul>
+<li>Scalable whole-genome single-cell library preparation without preamplification<br />
+<a href="https://www.nature.com/articles/nmeth.4140">https://www.nature.com/articles/nmeth.4140</a></li>
+<li>Inference of clonal gene expression through integration of single cell DNA &amp; RNA sequencing<br />
+Can we infer clone specific gene expression?<br />
+Clonealign (Kieran Campbell)<br />
+<a href="https://github.com/kieranrcampbell/clonealign">https://github.com/kieranrcampbell/clonealign</a></li>
+</ul>
+
+<h2 id="quantifying-patient-specific-evolutionary-dynamics">Quantifying patient-specific evolutionary dynamics</h2>
+
+<p>Christina Curtis. Stanford University, Stanford, CA</p>
+
+<ul>
+<li>Intra-tumour diversification in colorectal cancer at the single-cell level<br />
+<a href="https://www.nature.com/articles/d41586-018-03841-x">https://www.nature.com/articles/d41586-018-03841-x</a><br />
+<a href="https://www.nature.com/articles/s41586-018-0024-3">https://www.nature.com/articles/s41586-018-0024-3</a><br />
+Most mutations were acquired during the final dominant clonal expansion of the cancer and resulted from mutational processes that are absent from normal colorectal cells</li>
+</ul>
+
+<h2 id="highly-sensitive-tumor-detection-and-classification-using-methylome-analysis-of-plasma-cfdna">Highly Sensitive Tumor Detection and Classification using Methylome Analysis of Plasma cfDNA</h2>
+
+<p>Daniel Diniz De Carvalho. Princess Margaret Cancer Centre, Toronto, ON, Canada</p>
+
+<ul>
+<li>DNA methylation patterns are tissue-specific and conserved across individuals</li>
+<li>Deconvolutiing the tumor microenviroment form DNA methylation data (to be published)</li>
+
+<li><p>Multiplatform Analysis of 12 Cancer Types Reveals Molecular Classification within and across Tissues of Origin<br />
+<a href="http://www.cell.com/action/showImagesData?pii=S0092-8674%2814%2900876-9">http://www.cell.com/action/showImagesData?pii=S0092-8674%2814%2900876-9</a><br />
+Recent genomic analyses of pathologically defined tumor types identify “within-a-tissue” disease subtypes. However, the extent to which genomic signatures are shared across tissues is still unclear. We performed an integrative analysis using five genome-wide platforms and one proteomic platform on 3,527 specimens from 12 cancer types, revealing a unified classification into 11 major subtypes. Five subtypes were nearly identical to their tissue-of-origin counterparts, but several distinct cancer types were found to converge into common subtypes. Lung squamous, head and neck, and a subset of bladder cancers coalesced into one subtype typified by TP53 alterations, TP63 amplifications, and high expression of immune and proliferation pathway genes. Of note, bladder cancers split into three pan-cancer subtypes. The multiplatform classification, while correlated with tissue-of-origin, provides independent information for predicting clinical outcomes. All data sets are available for data-mining from a unified resource to support further biological discoveries and insights into novel therapeutic strategies.</p></li>
+
+<li><p>Analysis of Plasma Epstein–Barr Virus DNA to Screen for Nasopharyngeal Cancer<br />
+<a href="http://www.nejm.org/doi/full/10.1056/NEJMoa1701717">http://www.nejm.org/doi/full/10.1056/NEJMoa1701717</a></p>
+
+<ul>
+<li>pros: 100-1000 copies per cell; high sensentivity</li>
+<li>cons: Low specificity; presense of EBV doesn&rsquo;t mean cancer</li>
+</ul></li>
+
+<li><p>Direct detection of early-stage cancers using circulating tumor DNA<br />
+<a href="http://stm.sciencemag.org/content/9/403/eaan2415">http://stm.sciencemag.org/content/9/403/eaan2415</a><br />
+Early detection and intervention are likely to be the most effective means for reducing morbidity and mortality of human cancer. However, development of methods for noninvasive detection of early-stage tumors has remained a challenge. We have developed an approach called targeted error correction sequencing (TEC-Seq) that allows ultrasensitive direct evaluation of sequence changes in circulating cell-free DNA using massively parallel sequencing. We have used this approach to examine 58 cancer-related genes encompassing 81 kb. Analysis of plasma from 44 healthy individuals identified genomic changes related to clonal hematopoiesis in 16% of asymptomatic individuals but no alterations in driver genes related to solid cancers. Evaluation of 200 patients with colorectal, breast, lung, or ovarian cancer detected somatic mutations in the plasma of 71, 59, 59, and 68%, respectively, of patients with stage I or II disease. Analyses of mutations in the circulation revealed high concordance with alterations in the tumors of these patients. In patients with resectable colorectal cancers, higher amounts of preoperative circulating tumor DNA were associated with disease recurrence and decreased overall survival. These analyses provide a broadly applicable approach for noninvasive detection of early-stage tumors that may be useful for screening and management of patients with cancer.</p>
+
+<ul>
+<li>pros: presense of driver mutations strongly associated with cancer (but not always); higher specificity</li>
+<li>cons: one or two somatic variations per cell; not many recurrent mutations to moniter; low sensentivity</li>
+</ul></li>
+
+<li><p>Capture-based approach<br />
+cfMeDIP-seq<br />
+1 ng of DNA input
+Evaluation on pancreatic cancer, RRBS vs. cfMeDIP-seq (what is the difference?)<br />
+machine-learning classifier<br />
+Applicaiton: discriminate different cancer types</p></li>
+</ul>
+
+<h2 id="non-invasive-detection-of-cancers-in-plasma-with-dna-methylation-haplotypes">Non-invasive detection of cancers in plasma with DNA methylation haplotypes</h2>
+
+<p>Kun Zhang. University of California, San Diego, La Jolla, CA</p>
+
+<ul>
+<li>Methylation haplotype analysis of bisulfite sequencing data
+<a href="https://github.com/dinhdiep/MONOD2">https://github.com/dinhdiep/MONOD2</a></li>
+<li>Identification of methylation haplotype blocks aids in deconvolution of heterogeneous tissue samples and tumor tissue-of-origin mapping from plasma DNA<br />
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5374016/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5374016/</a></li>
+</ul>
+
+<p>Detecting early-stage CRC with Guoxiang Cai, Fudan<br />
+specificy   sensentivity<br />
+healthy 93.3 -<br />
+adenoma  -    75<br />
+CRC plasma, stage 1 - 73.4<br />
+CRC plasma, stage 2 - 78.7<br />
+CRC plasma, stage 3 - 88<br />
+CRC plasma, stage 4 - 100</p>
+
+<h2 id="cancer-locator-harnessing-the-diagnostic-potential-of-cell-free-dna-methylation">Cancer locator: Harnessing the diagnostic potential of cell-free DNA methylation</h2>
+
+<p>Jasmine Xianghong Zhou. University of California at Los Angeles, Los Angeles, CA</p>
+
+<h2 id="epigenetic-traces-in-plasma-dna">Epigenetic traces in plasma DNA</h2>
+
+<p>Michael R. Speicher. Medical University of Graz, Graz, Austria</p>
+
+<ul>
+<li>Methylation patterns in serum DNA for early identification of disseminated breast cancer<br />
+<a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-017-0499-9">https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-017-0499-9</a></li>
+</ul>
+
+<h2 id="sequence-based-dna-methylation-analysis">Sequence based DNA methylation analysis</h2>
+
+<p>Martin Hirst. The University of British Columbia, Vancouver, BC, Canada (<a href="http://hirstlab.msl.ubc.ca/">http://hirstlab.msl.ubc.ca/</a>)</p>
+
+<h2 id="how-and-why-look-for-clusters-of-cis-regulatory-elements-cores-aka-super-enhancers-in-cancer">How and why look for clusters of cis-regulatory elements (COREs, aka super-enhancers) in cancer</h2>
+
+<p>Mathieu Lupien. Princess Margaret Cancer Ctr., Toronto, ON, Canada</p>
+
+<p>CREAM: Clustering of genomic REgions Analysis Method (<a href="https://www.biorxiv.org/content/early/2018/03/20/222562">https://www.biorxiv.org/content/early/2018/03/20/222562</a>)</p>
+
+<hr />
+
+<h2 id="n-of-1-networks-to-personalized-cancer-treatment">N-of-1 networks to personalized cancer treatment</h2>
+
+<p>Josh Stuart, 11/18/2017</p>
+
+<p>Cancers come in several forms according to the organ and tissue of origin, the type of mutagen and the impacted genetic pathways that contribute to oncogenic progression. Pan-Cancer analyses across multiple types of cancers, using multiple types of omics data, have identified molecular-based subtypes of clinical importance. Even so, patients may not respond to the usual treatment regime and carry their own unique alterations. I will discuss network integration strategies for building patient-specific networks to model the aberrant wiring in a single person’s tumor. The goal is to then strategies treatment for the person based on critical nodes in the uncovered network.</p>
+
+<p><strong>Identify closest cancer form</strong><br />
+<strong>Identify impactful variants</strong><br />
+<strong>Identify an explanatory network model</strong></p>
+
+<p>Multiplatform Analysis of 12 Cancer Types Reveals Molecular Classification within and across Tissues of Origin<br />
+<a href="https://linkinghub.elsevier.com/retrieve/pii/S0092-8674(14)00876-9">https://linkinghub.elsevier.com/retrieve/pii/S0092-8674(14)00876-9</a></p>
+
+<p>tissue-of-origin signals, 10-20% reclassified associated w/ survial</p>
+
+<h2 id="personal-regulome-navigation">Personal regulome navigation</h2>
+
+<p>Howard Chang, 11/2/2017</p>
+
+<p><strong>Regulome but not genome mutation pattern predicts clinical response to HDACi</strong></p>
+
+<p><a href="http://www.cell.com/cancer-cell/pdf/S1535-6108(17)30204-0.pdf">http://www.cell.com/cancer-cell/pdf/S1535-6108(17)30204-0.pdf</a></p>
+
+<p><strong>T-ATAC: Transcript-indexed ATAC pairs single cell RNA and ATAC-Seq</strong></p>
+
+<p><a href="https://www.nature.com/nature/journal/v547/n7661/abs/nature22976.html">https://www.nature.com/nature/journal/v547/n7661/abs/nature22976.html</a></p>
+
+<p>Precision leukemia diagnosis with T-ATAC</p>
+
+<p><strong>Enhancer connectome in primary T cells</strong></p>
+
+<p><a href="http://www.nature.com/ng/journal/v49/n11/full/ng.3963.html">http://www.nature.com/ng/journal/v49/n11/full/ng.3963.html</a><br />
+<a href="http://www.nature.com/nmeth/journal/v13/n11/abs/nmeth.3999.html">http://www.nature.com/nmeth/journal/v13/n11/abs/nmeth.3999.html</a></p>
+
+<h2 id="discoveries-and-opportunities-for-translation-using-vanderbilt-s-gene-x-medical-phenome-catalog">Discoveries and opportunities for translation using Vanderbilt&rsquo;s Gene X Medical Phenome Catalog</h2>
+
+<p>Nancy Cox, 11/2/2017</p>
+
+<p>PrediXcan<br />
+<a href="https://github.com/hakyimlab/PrediXcan">https://github.com/hakyimlab/PrediXcan</a></p>
+
+<h2 id="epigenomics-signatures">Epigenomics signatures</h2>
+
+<p>Joseph Ecker</p>
+
+<p>Organisms with identical genomes can exhibits distinct phenotypes, such as plants (fwa-1 vs. wt), insects, mammals.</p>
+
+<p>DNA methylation dynamics</p>
+
+<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/27203113">https://www.ncbi.nlm.nih.gov/pubmed/27203113</a><br />
+<a href="http://science.sciencemag.org/content/356/6337/eaaj2239">http://science.sciencemag.org/content/356/6337/eaaj2239</a></p>
+
+<h2 id="from-genomic-variation-to-molecular-mechanism">From genomic variation to molecular mechanism</h2>
+
+<p>Jan Korbel</p>
+
+<p>Germline determinants of the somatic mutation landscape in 2,642 cancer genomes <a href="https://www.biorxiv.org/content/biorxiv/early/2017/11/01/208330.full.pdf">https://www.biorxiv.org/content/biorxiv/early/2017/11/01/208330.full.pdf</a></p>
+
+<p>Structure variant discovery by paired-end sequencing</p>
+
+<p>SVs associated with repetitive DNA: model for inversion information in the human genome. They are extremely difficult to detect, and are overlooked using main-stream NGS.</p>
+
+<p><strong>Strand-Seq</strong></p>
+
+<ul>
+<li>Strand specific single cell DNA sequencing</li>
+<li>Inverstion mapping and haplotype phasing of whole genomes</li>
+<li>Detecting SVs &gt;50kb</li>
+<li>Illumina, Matepairs, Pacbio, Stran-Seq comparision</li>
+</ul>
+
+<h2 id="big-data-in-biology">Big data in biology</h2>
+
+<p>Ewan Birney</p>
+
+<p><strong>Human: the new model organism</strong></p>
+
+<ul>
+<li>Similar to most other life forms on earch</li>
+<li>Outbred organisms with pretty good genetics</li>
+<li>Huge cohorts, millions of people</li>
+<li>Big (lots of cells)</li>
+<li>Willing participants &ndash; they take themselves to hospitals to be phenotyped, and genotyped</li>
+<li>Popular organisms &ndash; research into them attracts a lot of funding</li>
+<li>A great model organism for understanding biology &ndash; including human disease</li>
+<li>Human is a very impressive organism for discovery
+
+<ul>
+<li>Massive cohort size</li>
+<li>Well-established phenotyping schemes</li>
+<li>Spill-over effect from healthcare studies and practice</li>
+</ul></li>
+</ul>
+
+<p>But,</p>
+
+<ul>
+<li>You can&rsquo;t fix environment</li>
+<li>You can&rsquo;t sample its development</li>
+<li>You can&rsquo;t do whole-organism perturbation experiements</li>
+</ul>
+
+<p><strong>Medaka fish</strong></p>
+
+<ul>
+<li>Well established model (from 1910s)</li>
+<li>Highly inbred strains</li>
+<li>Excellent genetics</li>
+<li>Genome sequenced</li>
+<li>CRISPR, GFP</li>
+<li>Can inbreed from the wild</li>
+</ul>
+
+<h2 id="advances-in-cancer-immunotheray">Advances in Cancer Immunotheray</h2>
+
+<p>Edgar Engleman, 11/1/2017</p>
+
+<p><strong>Bariers to effective immunotherapy</strong></p>
+
+<ul>
+<li>Tumors contain normal component (self Ag) and immune cells are reluctant to attack self due to:
+
+<ul>
+<li>&ldquo;Central tolerance&rdquo;, deletion of T and B lymphocytes with receptors for self</li>
+<li>&ldquo;Peripheral tolerance&rdquo; = checkpoint molecules, targets</li>
+</ul></li>
+<li>Tumor microenvironment is highly immunosuppressive (TAM, Treg, MDSC, DC, IDO, adenosine, TGF-beta, IL-10, VEGF)</li>
+<li>Tumors not only escape most therapies that target a single tumor component, they hijack the immune system to promote their growth</li>
+</ul>
+
+<p><strong>Early approach: tumor-binding mAbs</strong></p>
+
+<ul>
+<li>mAbs recognizing tumor associated antigens or molecules that support their growth</li>
+<li>Each mAbs recognizes only a single target</li>
+<li>Trastuzumab (Herceptin) for breast cancer. Cetuximab (Erbitux) for NSCLC. Combined with chemotherapy, only limited improvement.
+
+<ul>
+<li>cost effecive manufacturing</li>
+<li>widely applicable</li>
+<li>safe and well toleraged</li>
+<li>limited efficacy as monotheray</li>
+<li>mAb-drug conjuages
+<br /></li>
+</ul></li>
+</ul>
+
+<p><strong>T cells can recognize and kill tumor cells</strong></p>
+
+<ul>
+<li>Tumoral CD8+ T and Th1 cells are usually positive prognostic markers for survial</li>
+</ul>
+
+<p><strong>Another early approach: dentritic cells to stimulate T cell mediated anti-tumor immunity</strong></p>
+
+<ul>
+<li>DC based immunotherapy Circa 1992
+
+<ul>
+<li>high cost and complexity</li>
+<li>moderate efficacy
+<br /></li>
+</ul></li>
+</ul>
+
+<p><strong>Chimeric antigen receptor (CAR) T cells</strong></p>
+
+<ul>
+<li>recognize highly expressed antigenes independent of MHC
+
+<ul>
+<li>High potency against hematological malignancies</li>
+<li>Not restricted HLA antigens</li>
+<li>High cost and complexity</li>
+<li>Can be toxic</li>
+<li>No demonstrated efficacy yet towards solid tumors</li>
+</ul></li>
+</ul>
+
+<p><strong>Immue checkpoint blocker</strong></p>
+
+<ul>
+<li>PD1, expressed in APC and tumor cells. CTLA-4, only in APC</li>
+<li>Sensitive cancers: melanoma, renal, bladder, lung, gastric, HNSC, ovarian. Other solid tumors are mostly resistent</li>
+<li>Most drastic evidence up to now: Pembrolizumab (anti-PD-1) vs. chemotherapy for PD-L1 positive NSLSC. Reck M. et al. NEHJ 2016
+
+<ul>
+<li>cost-effective manufacturing</li>
+<li>well-tolerated</li>
+<li>durable response against diverse tumors</li>
+<li>many patients are tumor types are resistent</li>
+<li>tumors with low mutational burdens</li>
+<li>tumors lacking PD-1</li>
+<li>tumors lacking T cell infiltrate (&ldquo;cold&rdquo; tumors)</li>
+<li>Autoimmunity</li>
+</ul></li>
+</ul>
+
+<h2 id="circulating-tumor-dna-analysis-for-cancer-detection-and-monitoring">Circulating tumor DNA analysis for cancer detection and monitoring</h2>
+
+<p>Max Diehn, 10/19/2017</p>
+
+<p><strong>Introduction</strong></p>
+
+<ul>
+<li>175 bp (one nucleosome wrap)</li>
+<li>5ng/ml of plasma in healthy adults</li>
+<li>In cancer, but also non-malignant conditons, such as inflammation</li>
+<li>mostly from hematopoietic cells (80-90%)</li>
+<li>Half-life: 0.5-2 hours</li>
+<li>dynamic range: 1pg/ml-10ng/ml</li>
+</ul>
+
+<p><strong>Detection methods (Detection limit)</strong></p>
+
+<ul>
+<li>Sanger sequencing (&gt;10%)</li>
+<li>Pyrosequencing (10%)</li>
+<li>WES (5%)</li>
+<li>WGS (1%)</li>
+<li>Allele-specific qPCR (0.1%)</li>
+<li>Digital PCR &amp; Targeted NGS (0.05%)</li>
+<li>CAPP-Seq (0.00025%)</li>
+</ul>
+
+<p><strong>Development of CAPP-seq</strong></p>
+
+<p>Challenges: limited input molecules,low fractional abundance, inter-patient heterogeneity</p>
+
+<ul>
+<li>~300 genes recurrently mutated in NSCLC and SCLC</li>
+<li>Ultra-deep sequencing (&gt;20000x), pre-deduping</li>
+<li>Analytical sensitivity: 0.02%</li>
+</ul>
+
+<p>Improve:</p>
+
+<ul>
+<li>Increasing number of cfDNA molecules recovered</li>
+<li>Increasing number of mutations covered</li>
+<li>Decreasing background error rare</li>
+</ul>
+
+<p>Molecular barcoding for error repression</p>
+
+<p>Stereotyped errors in cfDNA NGS data</p>
+
+<p>Decreasing sequencing errors in cfDNA sequencing, iDES-enhanced CAPP-Seq</p>
+
+<ul>
+<li>Barcoding</li>
+<li>Polising</li>
+</ul>
+
+<p>10cc blood 5cc plasma, 30ng cfDNA, 5000 hGEs
+Analytic sensitivy : generalized 0.002%, personalized 0.00025%</p>
+
+<p><strong>Minimal residual disease (MRD)</strong></p>
+
+<p>Small volumns of tumor cells remaining after treatment in patients who have no clinical evidence of disease</p>
+
+<p>ctDNA MRD detection has been demonstrated in breast and colon cancers. How about lung cancer?</p>
+
+<p>ctDNA is prognostic in node-negative patients. Patients with non-detection MRD cfDNA has longer survial.</p>
+
+<p>ctDNA detections precedes clinical relapse.</p>
+
+<p><strong>Prospect for personalization of postradiotheray adjuvant treatment</strong></p>
+
+<ul>
+<li>cfDNA negative: none</li>
+<li>ctDNA positive: personlized adjuvant therapy
+
+<ul>
+<li>Tyrosine kiniase inh</li>
+<li>Immunotherapy
+Chemotherapy</li>
+</ul></li>
+</ul>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">&larr; <a href="/en/2017/09/rnaseqmm/">A typical RNASeq analysis</a></span>
+  <span class="nav-next"><a href="/en/2017/12/json2csv/">Convert json to csv</a> &rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/en\/2017\/09\/rnaseqmm\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/en\/2017\/12\/json2csv\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script src="/js/disqusloader.min.js"></script>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/littlebitofdata.com\/" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//https-littlebitofdata-com.disqus.com/embed.js';
+    
+    if (location.hash.match(/^#comment/)) {
+      var d = document, s = d.createElement('script');
+      s.src = disqus_js; s.async = true;
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    } else {
+      disqusLoader('#disqus_thread', {
+        scriptUrl: disqus_js, laziness: 0, disqusConfig: disqus_config
+      });
+    }
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="/js/center-img.js"></script>
+
+<script async src="/js/right-quote.js"></script>
+
+<script async src="/js/no-highlight.js"></script>
+
+<script async src="/js/fix-footnote.js"></script>
+
+<script async src="/js/math-code.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="/">Hong Zheng</a> 2017 - 2021 | <a href="https://github.com/zhengh42">GitHub</a></div>
+  
+  </footer>
+  </article>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-104890341-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Today_i_learned on LittleBitofData</title>
+    <link>https://littlebitofdata.com/categories/today_i_learned/</link>
+    <description>Recent content in Today_i_learned on LittleBitofData</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://littlebitofdata.com/categories/today_i_learned/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>给乐乐的歌单</title>
+      <link>https://littlebitofdata.com/lele/bookexcerpt2018/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/lele/bookexcerpt2018/</guid>
+      <description>歌单 Young and Beautiful(Lana Del Rey)&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; Young and Beautiful Lana Del Rey I&amp;rsquo;ve seen the world, Done it all, had my cake now 目睹世界，尽失初样 Diamonds, brilliant, and Bel-Air now 金迷纸醉，靡靡奢华 Hot summer nights, mid-July 仲夏夜茫，七月未央 When you and I were forever wild 我们年</description>
+    </item>
+    
+    <item>
+      <title>书摘2019</title>
+      <link>https://littlebitofdata.com/cn/2019/01/bookexcerpt2011/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/cn/2019/01/bookexcerpt2011/</guid>
+      <description>书单 面具后的女人(柯莱特)&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; 面具后的女人(La Femme Cachée) [法] 柯莱特(Colette)</description>
+    </item>
+    
+    <item>
+      <title>书摘2018</title>
+      <link>https://littlebitofdata.com/cn/2018/12/bookexcerpt2018/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/cn/2018/12/bookexcerpt2018/</guid>
+      <description>书单 给所有昨日的诗(维斯瓦娃·辛波斯卡)&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; 月亮和六便士(William Somerset Maugham)&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; 王小波&amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title>「第二性」书摘</title>
+      <link>https://littlebitofdata.com/cn/2018/06/secondsex/</link>
+      <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/cn/2018/06/secondsex/</guid>
+      <description>Simone de Beauvoir 但凡男人写女人的东西都是值得怀疑的，因为男人既是法官又是当事人。(普兰·德·拉巴尔) 男人的极大幸运在于，他，不论在成年还是在小时候，必</description>
+    </item>
+    
+    <item>
+      <title>Lecture Notes</title>
+      <link>https://littlebitofdata.com/en/2017/12/lecture_notes/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/12/lecture_notes/</guid>
+      <description>10X genomics workshop  Sequencing depth for typical samples: 50,000 raw reads per cell is the minimal recommended sequencing depth Cell Ranger  mkfastq, from bcl to fastq count, transcriptome alignment with STAR aggr reanalyze  Count pipeline
+ BAM MEX-gene/barcode matrix, market exchange format HTML .cloupe files: 2D projections, clustering, DE  Filterred gene-barcode matrix: select GEMs that likely contain cells:
+ sum UMI counts for each barcode select barccode with total UMI count &amp;gt;=10% of 99th percentile of the expected recoverred cells   How do we learn what works?</description>
+    </item>
+    
+  </channel>
+</rss>

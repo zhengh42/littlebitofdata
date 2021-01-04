@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>English Blog on LittleBitofData</title>
+    <link>https://littlebitofdata.com/en/</link>
+    <description>Recent content in English Blog on LittleBitofData</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://littlebitofdata.com/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Little Problems of Perl</title>
+      <link>https://littlebitofdata.com/en/2019/02/perlproblems/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2019/02/perlproblems/</guid>
+      <description> undefined symbol: Perl_Gthr_key_ptr How to solve the problem of &amp;ldquo;symbol lookup error: /home/zhengh42/perl5/lib/perl5/x86_64-linux-thread-multi/auto/Clone/Clone.so: undefined symbol: Perl_Gthr_key_ptr&amp;rdquo;?
+My specific solution:
+Look at PERL5LIB environment variable: perl -V Or in ~/.bash_rc
+Then reset the PERL5LIB variable: unset PERL5LIB
+Install perl packages locally % cpan cpan&amp;gt; o conf makepl_arg INSTALL_BASE=/mydir/perl cpan&amp;gt; o conf commit cpan&amp;gt; install themodule  </description>
+    </item>
+    
+    <item>
+      <title>Python and Virtual Environment</title>
+      <link>https://littlebitofdata.com/en/2018/01/python/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2018/01/python/</guid>
+      <description>Download relevant packages:
+wget https://sqlite.org/2017/sqlite-autoconf-3210000.tar.gz wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz wget https://pypi.python.org/packages/69/56/f0f52281b5175e3d9ca8623dadbc3b684e66350ea9e0006736194b265e99/setuptools-38.2.4.zip wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz  Install sqlite:
+tar -zxf sqlite-autoconf-3210000.tar.gz cd sqlite-autoconf-3210000 ./configure --prefix=/home/users/zhengh42/python/python-2.7.13 make make install cd ../  Install Python:
+tar -zxf Python-2.7.13.tgz cd Python-2.7.13 ./configure --prefix=/home/users/zhengh42/python/python-2.7.13 make make install which python cd ../  Install Setuptools:
+unzip setuptools-38.2.4.zip cd setuptools-38.2.4/ ../python-2.7.13/bin/python setup.py install cd ../  Install pip:
+tar -zxf pip-9.0.1.tar.gz cd pip-9.0.1/ ../python-2.7.13/bin/python setup.py install cd ../  Install virtualenv:</description>
+    </item>
+    
+    <item>
+      <title>Principal Components Analysis</title>
+      <link>https://littlebitofdata.com/en/2017/12/pca/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/12/pca/</guid>
+      <description>Denote the data matrix as $X$. It is a $n*p$ matrix with $n$ individuals/observations as rows and $p$ features/variables as columns.
+Firstly, center (necessary) and scale (not required, depending on the data structure) X, so that the column means are 0s, and the column variances are 1s.
+X &amp;lt;- scale(X,center = T, scale = T)  Use any of the three functions in R to perform PCA.
+# The centering and scaling options are still specified, although not necessary here since X has already been centered and scaled.</description>
+    </item>
+    
+    <item>
+      <title>Variance, Covariance, and Correlation</title>
+      <link>https://littlebitofdata.com/en/2017/12/statsbasic/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/12/statsbasic/</guid>
+      <description>Variance
+Variance is the difference between when we square the inputs to expectation and when we square the expectation itself.
+$Var(x) = \frac {1}{n} \sum_{i=1}^{n} (x_{i} - \bar{x})^2 $ =
+$ E[(x-\bar{x})^2]$ =
+$ E[x^2 - 2 \times x \times \bar{x} + (\bar{x})^2] $ =
+$ E[x^2] -2 \times E[X] \times E[\bar{x}] + E[(\bar{x})^2] $ =
+$ E[x^2] - (E[x])^2$
+Note:
+ $x$ is a vector ($n * 1$ matrix). $E[\bar{x}] == E[x] == \bar{x}$  Covariance</description>
+    </item>
+    
+    <item>
+      <title>Convert json to csv</title>
+      <link>https://littlebitofdata.com/en/2017/12/json2csv/</link>
+      <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/12/json2csv/</guid>
+      <description>It might be a minor issue, but has troubled me for a while.
+Sometimes the data you gather is in json format. For example, I work with TCGA data from GDC data portal for a while. The metadata is only available in json format (example of two entries ). I have to convert it to csv, or tab-delimited format before I can process it. At first I thought it should be quite simple, but it still took me several hours.</description>
+    </item>
+    
+    <item>
+      <title>Lecture Notes</title>
+      <link>https://littlebitofdata.com/en/2017/12/lecture_notes/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/12/lecture_notes/</guid>
+      <description>10X genomics workshop  Sequencing depth for typical samples: 50,000 raw reads per cell is the minimal recommended sequencing depth Cell Ranger  mkfastq, from bcl to fastq count, transcriptome alignment with STAR aggr reanalyze  Count pipeline
+ BAM MEX-gene/barcode matrix, market exchange format HTML .cloupe files: 2D projections, clustering, DE  Filterred gene-barcode matrix: select GEMs that likely contain cells:
+ sum UMI counts for each barcode select barccode with total UMI count &amp;gt;=10% of 99th percentile of the expected recoverred cells   How do we learn what works?</description>
+    </item>
+    
+    <item>
+      <title>A typical RNASeq analysis</title>
+      <link>https://littlebitofdata.com/en/2017/09/rnaseqmm/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/09/rnaseqmm/</guid>
+      <description>This is a typical RNASeq analysis pipeline, not atypical.
+ Purpose Given RNASeq data from two group of samples (sequenced from mice), control and treatment, find out the differentially expressed genes.
+Scripts can also be found in https://github.com/zhengh42/RNASeq_MM.
+Download reference and prepare index ####### # These steps are performed in linux/bash, in reference/ directory # Script location: reference/run_download_index.sh # Kallisto and Salmon are from pre-built Docker images. Scripts for building the images can be found in https://github.</description>
+    </item>
+    
+    <item>
+      <title>TMTOWTDI</title>
+      <link>https://littlebitofdata.com/en/2017/08/tmtowtdi/</link>
+      <pubDate>Wed, 30 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/08/tmtowtdi/</guid>
+      <description>There&amp;rsquo;s more than one way to do it. (TMTOWTDI) Although this is a perl motto, it applies to R, Python, bash, whatever language you name it. The commands I put together here are very basic data manipulating techniques. I use Linux/Bash and R a lot, but often I forget the specific syntax and have to look it up somewhere. Here is the collection of them: Calculate the sum of one</description>
+    </item>
+    
+    <item>
+      <title>Detection of Copy Number Variation in Targeted Sequencing Samples</title>
+      <link>https://littlebitofdata.com/en/2017/08/cnv_pipeline/</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/08/cnv_pipeline/</guid>
+      <description>Introduction There are two categories of methods for copy number variation (CNV) detection.
+ Based on read pair information
+1) The paired-end mapping approach, in which mapped paired-reads whose distances are significantly different from the predetermined average insert size are used.
+Tools: BreakDancer, VariationHunter, PEMer, etc.
+2) The split read (SR) approach identifies read pairs in which one read from each pair is aligned to the reference genome uniquely while the other one fails to map or only partially maps to the genome.</description>
+    </item>
+    
+    <item>
+      <title>Docker practice</title>
+      <link>https://littlebitofdata.com/en/2017/08/docker/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/08/docker/</guid>
+      <description>Basic commands Run a container from an image
+docker run -it my_image
+The -it instructs Docker to allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+Quit from a container with interactive bash shell
+exit or
+ctrl+p followed by ctrl+q
+Stop a container
+docker stop my_container
+Remove a container (only stopped containers can be removed)
+docker rm my_container
+Stop and remove all containers</description>
+    </item>
+    
+    <item>
+      <title>Solar Eclipse</title>
+      <link>https://littlebitofdata.com/en/2017/08/solar-eclipse/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/08/solar-eclipse/</guid>
+      <description>Time: 2017-8-21 10:12:14
+Location:「37.432277, -122.179140」
+The device used to capture eclipse image at hand
+Also refected in the shadow of leaves
+ As in the soft and sweet eclipse, when soul meets soul on lovers&amp;rsquo; lips.
+—— Prometheus Unbound by Percy Bysshe Shelley
+ However, it is just an illusion that the sun and the moon meet and &amp;ldquo;kiss&amp;rdquo; each other. They are never close, and if they are&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Strandness in RNASeq</title>
+      <link>https://littlebitofdata.com/en/2017/08/strandness_in_rnaseq/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/08/strandness_in_rnaseq/</guid>
+      <description>How to tell whether the paired-end sequencing reads in an RNASeq library are strand-specific or not? According to how read 1 and read 2 align to DNA and RNA sequences, there are three types of RNASeq libraries:
+ If sequences of read 1 align to the RNA strand, the library is &amp;ldquo;stranded&amp;rdquo;. If sequences of read 2 align to the RNA strand, the library is &amp;ldquo;reversed stranded&amp;rdquo;. Sometimes sequences of read 1 align to the RNA strand; the other times sequences of read 2 align to the RNA strand.</description>
+    </item>
+    
+  </channel>
+</rss>

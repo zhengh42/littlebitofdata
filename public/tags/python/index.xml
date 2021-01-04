@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on LittleBitofData</title>
+    <link>https://littlebitofdata.com/tags/python/</link>
+    <description>Recent content in Python on LittleBitofData</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://littlebitofdata.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python and Virtual Environment</title>
+      <link>https://littlebitofdata.com/en/2018/01/python/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2018/01/python/</guid>
+      <description>Download relevant packages:
+wget https://sqlite.org/2017/sqlite-autoconf-3210000.tar.gz wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz wget https://pypi.python.org/packages/69/56/f0f52281b5175e3d9ca8623dadbc3b684e66350ea9e0006736194b265e99/setuptools-38.2.4.zip wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz  Install sqlite:
+tar -zxf sqlite-autoconf-3210000.tar.gz cd sqlite-autoconf-3210000 ./configure --prefix=/home/users/zhengh42/python/python-2.7.13 make make install cd ../  Install Python:
+tar -zxf Python-2.7.13.tgz cd Python-2.7.13 ./configure --prefix=/home/users/zhengh42/python/python-2.7.13 make make install which python cd ../  Install Setuptools:
+unzip setuptools-38.2.4.zip cd setuptools-38.2.4/ ../python-2.7.13/bin/python setup.py install cd ../  Install pip:
+tar -zxf pip-9.0.1.tar.gz cd pip-9.0.1/ ../python-2.7.13/bin/python setup.py install cd ../  Install virtualenv:</description>
+    </item>
+    
+  </channel>
+</rss>

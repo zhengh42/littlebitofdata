@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics on LittleBitofData</title>
+    <link>https://littlebitofdata.com/tags/statistics/</link>
+    <description>Recent content in Statistics on LittleBitofData</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://littlebitofdata.com/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Principal Components Analysis</title>
+      <link>https://littlebitofdata.com/en/2017/12/pca/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/12/pca/</guid>
+      <description>Denote the data matrix as $X$. It is a $n*p$ matrix with $n$ individuals/observations as rows and $p$ features/variables as columns.
+Firstly, center (necessary) and scale (not required, depending on the data structure) X, so that the column means are 0s, and the column variances are 1s.
+X &amp;lt;- scale(X,center = T, scale = T)  Use any of the three functions in R to perform PCA.
+# The centering and scaling options are still specified, although not necessary here since X has already been centered and scaled.</description>
+    </item>
+    
+    <item>
+      <title>Variance, Covariance, and Correlation</title>
+      <link>https://littlebitofdata.com/en/2017/12/statsbasic/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/12/statsbasic/</guid>
+      <description>Variance
+Variance is the difference between when we square the inputs to expectation and when we square the expectation itself.
+$Var(x) = \frac {1}{n} \sum_{i=1}^{n} (x_{i} - \bar{x})^2 $ =
+$ E[(x-\bar{x})^2]$ =
+$ E[x^2 - 2 \times x \times \bar{x} + (\bar{x})^2] $ =
+$ E[x^2] -2 \times E[X] \times E[\bar{x}] + E[(\bar{x})^2] $ =
+$ E[x^2] - (E[x])^2$
+Note:
+ $x$ is a vector ($n * 1$ matrix). $E[\bar{x}] == E[x] == \bar{x}$  Covariance</description>
+    </item>
+    
+    <item>
+      <title>生活中的贝叶斯：谈医院检查的必要性</title>
+      <link>https://littlebitofdata.com/cn/2017/08/bayesian_in_life_series1/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/cn/2017/08/bayesian_in_life_series1/</guid>
+      <description>不少人抱怨去医院看病各种检查太多，但事实上，仅通过一次检查常常是确诊不了疾病的，通常至少需要两三次检查。为什么呢？本文从Bayes&amp;rsqu</description>
+    </item>
+    
+  </channel>
+</rss>

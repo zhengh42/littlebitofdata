@@ -3,7 +3,8 @@ languageCode: "en-us"
 title: "LittleBitofData"
 theme: "hugo-ivy"
 googleAnalytics: "UA-104890341-1"
-disqusShortname: "https-fishycat-netlify-com"
+#disqusShortname: "https-fishycat-netlify-com"
+disqusShortname: "https-littlebitofdata-com"
 ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
 hasCJKLanguage: true
 enableEmoji: true
@@ -92,8 +93,8 @@ menu:
 
 params:
   description: "A little bit of data, and me"
-  footer: "&copy; [Hong Zheng](/) 2017 - 2020 | [Github](https://github.com/zhengh42) "
-  disqusURL: "https://fishycat.netlify.com"
+  footer: "&copy; [Hong Zheng](/) 2017 - 2021 | [GitHub](https://github.com/zhengh42) "
+  disqusURL: "https://littlebitofdata.com/"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
   githubContentURL: "https://github.com/zhengh42/hong_pages/tree/master/content/"
 

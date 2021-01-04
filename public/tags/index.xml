@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on LittleBitofData</title>
+    <link>https://littlebitofdata.com/tags/</link>
+    <description>Recent content in Tags on LittleBitofData</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://littlebitofdata.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bayesian</title>
+      <link>https://littlebitofdata.com/tags/bayesian/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/tags/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bioinformatics</title>
+      <link>https://littlebitofdata.com/tags/bioinformatics/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/tags/bioinformatics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cnv</title>
+      <link>https://littlebitofdata.com/tags/cnv/</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/tags/cnv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://littlebitofdata.com/tags/docker/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://littlebitofdata.com/tags/python/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rnaseq</title>
+      <link>https://littlebitofdata.com/tags/rnaseq/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/tags/rnaseq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://littlebitofdata.com/tags/statistics/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生活里的统计学</title>
+      <link>https://littlebitofdata.com/tags/%E7%94%9F%E6%B4%BB%E9%87%8C%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/tags/%E7%94%9F%E6%B4%BB%E9%87%8C%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

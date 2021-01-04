@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cnv on LittleBitofData</title>
+    <link>https://littlebitofdata.com/tags/cnv/</link>
+    <description>Recent content in Cnv on LittleBitofData</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://littlebitofdata.com/tags/cnv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Detection of Copy Number Variation in Targeted Sequencing Samples</title>
+      <link>https://littlebitofdata.com/en/2017/08/cnv_pipeline/</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/en/2017/08/cnv_pipeline/</guid>
+      <description>Introduction There are two categories of methods for copy number variation (CNV) detection.
+ Based on read pair information
+1) The paired-end mapping approach, in which mapped paired-reads whose distances are significantly different from the predetermined average insert size are used.
+Tools: BreakDancer, VariationHunter, PEMer, etc.
+2) The split read (SR) approach identifies read pairs in which one read from each pair is aligned to the reference genome uniquely while the other one fails to map or only partially maps to the genome.</description>
+    </item>
+    
+  </channel>
+</rss>

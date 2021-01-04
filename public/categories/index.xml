@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on LittleBitofData</title>
+    <link>https://littlebitofdata.com/categories/</link>
+    <description>Recent content in Categories on LittleBitofData</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://littlebitofdata.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Little Bit of Her</title>
+      <link>https://littlebitofdata.com/categories/a-little-bit-of-her/</link>
+      <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/categories/a-little-bit-of-her/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data at Fingertips</title>
+      <link>https://littlebitofdata.com/categories/data-at-fingertips/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/categories/data-at-fingertips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Today_i_learned</title>
+      <link>https://littlebitofdata.com/categories/today_i_learned/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://littlebitofdata.com/categories/today_i_learned/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

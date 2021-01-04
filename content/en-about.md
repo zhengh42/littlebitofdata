@@ -1,6 +1,7 @@
 ---
 title: "About"
 slug: "en/about"
+disable_comments: true
 ---
 
 Researcher. Data scientist. Amateur writer. Amateur artist.
@@ -14,8 +15,6 @@ See more
 - <a href="https://www.researchgate.net/profile/Hong_Zheng13" target="_blank">Research Gate</a>
 - <a href="https://profiles.stanford.edu/hong-zheng" target="_blank">Stanford page</a>
 - <a href="https://github.com/zhengh42/ArtisticVisualization" target="_blank">Artistic visualization with code</a>
-
-
 
 
 This site is created with <a href="https://gohugo.io" target="_blank">Hugo</a> and the theme <a href="https://github.com/yihui/hugo-ivy" target="_blank">hugo-ivy</a> is ported from <a href="https://github.com/rbind/yihui" target="_blank">yihui</a>.
