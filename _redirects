@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-http://fishycat.netlify.com/* http://littlebitofdata.com/:splat 301!

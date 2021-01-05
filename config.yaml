@@ -3,13 +3,12 @@ languageCode: "en-us"
 title: "LittleBitofData"
 theme: "hugo-ivy"
 googleAnalytics: "UA-104890341-1"
-#disqusShortname: "https-fishycat-netlify-com"
 disqusShortname: "https-littlebitofdata-com"
-ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 hasCJKLanguage: true
 enableEmoji: true
 footnotereturnlinkcontents: "↩"
-rssLimit: 30
+rssLimit: 100
 
 permalinks:
   cn: "/cn/:year/:month/:slug/"
@@ -40,8 +39,6 @@ menu:
       label: "categories"
       url: "/categories/"
       weight: 7
-
-
   en:
     - name: "Home"
       url: "/"
@@ -95,12 +92,21 @@ params:
   description: "A little bit of data, and me"
   footer: "&copy; [Hong Zheng](/) 2017 - 2021 | [GitHub](https://github.com/zhengh42) "
   disqusURL: "https://littlebitofdata.com/"
-  customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
+  customJS:
+    - "js/fix-toc.js"
+    - "js/center-img.js"
+    - "js/right-quote.js"
+    - "js/no-highlight.js"
+    - "js/fix-footnote.js"
+    - "js/math-code.js"
+    - "js/external-link.js"
+    - "js/alt-title.js"
+    - "js/header-link.js"
   githubContentURL: "https://github.com/zhengh42/hong_pages/tree/master/content/"
 
   # options for highlight.js (version, additional languages, and theme)
   highlightjsVersion: "9.12.0"
-  highlightjsCDN: "//cdn.bootcss.com"
+  highlightjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   highlightjsLang: ["r", "yaml", "tex"]
   highlightjsTheme: "github"
 
@@ -123,9 +129,15 @@ params:
     subscribe:
       cn: "订阅"
 
-blackfriday:
-    extensionsmask: ["noIntraEmphasis"]
-
 taxonomies:
    tag : "tags"
    category : "categories"
+
+markup:
+  defaultMarkdownHandler: blackFriday
+  blackFriday:
+    extensionsMask: ["noIntraEmphasis"]
+    fractions: false
+  goldmark:
+    renderer:
+      unsafe: true

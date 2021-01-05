@@ -33,9 +33,9 @@ Different tools have different names for stranded setting. To name a few:
 
 More information regarding RNA-Seq analysis pipelines and the parameter settings for the tools can be found:
 
- <a href="https://github.com/zhengh42/RNASeq_pipeline" target="_blank">GitHub: RNASeq pipelines</a>
+[GitHub: RNASeq pipeline](https://github.com/zhengh42/RNASeq_pipeline/tree/develop)
 
- <a href="https://academic.oup.com/gigascience/article/8/12/giz145/5663671?guestAccessKey=c350886b-32ec-416a-b941-a5cf68840cb8" target="_blank">GigaScience: Benchmark of RNA-Seq pipelines</a>
+[GigaScience: Benchmark of RNA-Seq pipelines](https://academic.oup.com/gigascience/article/8/12/giz145/5663671?guestAccessKey=c350886b-32ec-416a-b941-a5cf68840cb8)
 
 ---
 
