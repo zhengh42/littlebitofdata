@@ -18,4 +18,4 @@ See more
 
 This site is created with [hugo](https://gohugo.io) and the theme [hugo-ivy](https://github.com/yihui/hugo-ivy) is ported from [yihui](https://github.com/rbind/yihui).
 
-The cute cat logo is from [Deidre Wicks](https://www.etsy.com/shop/waterinmypaint).
+The cute cat logo is from [Deidre Wicks](https://www.deidrewicks.com).
