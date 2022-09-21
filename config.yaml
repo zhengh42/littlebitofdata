@@ -134,7 +134,7 @@ taxonomies:
    category : "categories"
 
 markup:
-  defaultMarkdownHandler: blackFriday
+  defaultMarkdownHandler: Goldmark
   blackFriday:
     extensionsMask: ["noIntraEmphasis"]
     fractions: false
