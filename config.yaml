@@ -90,7 +90,7 @@ menu:
 
 params:
   description: "A little bit of data, and me"
-  footer: "&copy; [Hong Zheng](/) 2017 - 2021 | [GitHub](https://github.com/zhengh42) "
+  footer: "&copy; [Hong Zheng](/) 2017 - 2022 | [GitHub](https://github.com/zhengh42) "
   disqusURL: "https://littlebitofdata.com/"
   customJS:
     - "js/fix-toc.js"
