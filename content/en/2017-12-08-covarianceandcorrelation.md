@@ -91,7 +91,7 @@ $$`
 
 Calculate covariance matrix in R:
 
-```{r}
+```r
 S <- cov(X)
 ```
 
@@ -131,7 +131,7 @@ $$`
  
 Calculate correlation matrix in R:
 
-```{r}
+```r
 S <- cor(X)
 ```
 
@@ -139,6 +139,5 @@ Further readings:
 https://www.countbayesie.com/blog/2015/2/21/variance-co-variance-and-correlation
 http://www.theanalysisfactor.com/covariance-matrices/  
 http://users.stat.umn.edu/~helwig/notes/datamat-Notes.pdf  
-【__Linear Algebra__】 http://www4.ncsu.edu/~slrace/LinearAlgebra.pdf 
 
 

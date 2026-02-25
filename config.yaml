@@ -1,4 +1,4 @@
-baseurl: "https://littlebitofdata.com/"
+baseurl: "https://littlebitofdata.netlify.app/"
 languageCode: "en-us"
 title: "LittleBitofData"
 theme: "hugo-ivy"
@@ -90,8 +90,8 @@ menu:
 
 params:
   description: "A little bit of data, and me"
-  footer: "&copy; [Hong Zheng](/) 2017 - 2022 | [GitHub](https://github.com/zhengh42) "
-  disqusURL: "https://littlebitofdata.com/"
+  footer: "&copy; [Hong Zheng](/) 2017 - 2026 | [GitHub](https://github.com/zhengh42) "
+  disqusURL: "https://littlebitofdata.netlify.app/"
   customJS:
     - "js/fix-toc.js"
     - "js/center-img.js"

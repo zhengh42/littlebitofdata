@@ -41,7 +41,7 @@ In this demo, both the read pair-based and RD-based methods were deployed to inv
 
 ### Ground-truth 1000 Genome CNV data
 
-```{r}
+```r
 ########
 #download
 ########
@@ -71,7 +71,7 @@ __Scripts__:
 
 run_DepthOfCoverage.sh:
 
-```{r}
+```r
 work_dir=/home/zhengh/projects/CNV/105genes
 target=105genespure
 interval_file=/home/database/targetBed/$target.bed
@@ -82,7 +82,7 @@ interval_file=/home/database/targetBed/$target.bed
 ```
 
 DepthOfCoverage.sh:
-```{r}
+```r
 bamlist=$1
 interval_file=$2
 QC_dir=$3
@@ -145,7 +145,7 @@ Importantly, if the experimental setup is expected to result in mean depths that
 c) Center each column of the matrix (RD.txt) so that the mean target value is 0 in preparation for PCA based normalization in the next step.
 
 
-```{bash}
+```bash
 work_dir=/home/zhengh/projects/CNV/105genes
 xhmm=/home/tools/XHMM/statgen-xhmm-cc14e528d909/xhmm
 covdata=$work_dir/QC/105genespure.bam.DP.sample_interval_summary
@@ -183,7 +183,7 @@ PCA analysis is used to determine the strongest independent ways (principal comp
 
 In this case, the first 2 PCs are removed from the datasets. 
 
-```{r}
+```r
 ########
 echo "Runs PCA on mean-centered data. Good luck."
 #######
@@ -214,7 +214,7 @@ The PCA-normalized coverage data might still have some targets that have very hi
 
 Next, the same targets and samples that are removed during the normalization process are also removed in the original dataset. This matrix will be used for annotation purposes in the subsequent CNV discovery steps.
 
-```{r}
+```r
 #######
 echo "Filters and z-score centers (by sample) the PCA-normalized data. Good luck."
 #######
@@ -257,7 +257,7 @@ These parameters are used in the HMM for CNV discovery and genotyping. They may 
 
 The parameters used for the current datasets are (1e-8    6       70      -3      1.1     0       0.9     3       1.1)
 
-```{r}
+```r
 #######
 echo "Discovers CNVs in normalized data. Good luck."
 #######

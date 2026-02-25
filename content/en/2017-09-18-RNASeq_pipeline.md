@@ -108,7 +108,7 @@ QC and transcript-level expression quantification
     #######
     # Get transcript level expression estimate using Kallisto
     # Since the library type is ISR, --rf-stranded argument is specified
-    # More information on the library type and strand information, see http://fishycat.netlify.com/en/2017/08/strandness_in_rnaseq/
+    # More information on the library type and strand information, see https://littlebitofdata.netlify.app/en/2017/08/strandness_in_rnaseq/
     #######
     docker run -v $raw_dir:/home/seq -v $ref_dir:/home/ref -v $work_dir/results/kallisto:/home/out \
             zhengh42/kallisto:0.43.1 \
